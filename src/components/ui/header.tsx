@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Header() {
   const pathname = usePathname();
@@ -15,13 +16,14 @@ export function Header() {
         <div className="flex">
           <Link href="/" className="flex items-center gap-2 px-4">
             <span className="font-bold text-lg">
-              <span className="text-indigo-600">Etüt</span><span className="text-indigo-500">Abi</span>
-              <span className="text-xs ml-2 text-gray-500">by HercAI</span>
+              <span className="text-indigo-600 dark:text-indigo-400">Etüt</span><span className="text-indigo-500 dark:text-indigo-300">Abi</span>
+              <span className="text-xs ml-2 text-gray-500 dark:text-gray-400">by HercAI</span>
             </span>
           </Link>
         </div>
-        {!isHome && (
-          <nav className="flex items-center">
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          {!isHome && (
             <Button
               variant="outline"
               size="sm"
@@ -33,8 +35,8 @@ export function Header() {
                 Ana Sayfa
               </Link>
             </Button>
-          </nav>
-        )}
+          )}
+        </div>
       </div>
     </header>
   );
