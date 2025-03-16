@@ -1,0 +1,559 @@
+{
+  "Math-9-Geometri-amg6gn": {
+    "questionId": "Math-9-Geometri-amg6gn",
+    "subject": "math",
+    "steps": [
+      "Bir küpün hacmini hesaplamak için bir kenarının uzunluğunu üç kez çarpmak gerekir.",
+      "Verilen kenar uzunluğunu kullanarak hesaplama yap.",
+      "Sonucu cm³ cinsinden yaz."
+    ],
+    "fullExplanation": "Bir küpün hacmi, tüm kenarlarının uzunluğunun çarpımıyla bulunur. Bu durumda, verilen kenar uzunluğu 3 cm'dir. Küpün her kenarı eşit uzunlukta olduğu için, hacmi hesaplarken bu uzunluğu üç kez çarpmamız gerekiyor. Yani, 3 cm x 3 cm x 3 cm işlemini yapmamız gerekmektedir. Bu işlemin sonucu 27 cm³'tür. Bu nedenle, bir kenarı 3 cm olan küpün hacmi 27 cm³ olacaktır. Bu, seçenekler arasında A şıkkı ile belirtilmiştir.",
+    "misconceptions": [
+      "Küpün hacmini hesaplarken sadece iki kenarını çarparak alanı hesaplamak. Bu, yüzey alanı hesaplama yöntemidir ve hacim hesaplaması için doğru değildir.",
+      "Kenar uzunluklarını toplayarak hacim hesaplamaya çalışmak. Bu, geometrik şekillerin çevresini hesaplama yöntemidir ve hacim hesaplaması için uygun değildir."
+    ]
+  },
+  "Math-9-Geometri-hisv94": {
+    "questionId": "Math-9-Geometri-hisv94",
+    "subject": "math",
+    "steps": [
+      "Üçgenin çevresi kenarların toplamına eşittir, yani üç kenarın toplamı 24 cm olmalıdır.",
+      "Verilen kenar uzunluklarından iki tanesini topla (8 cm + 10 cm).",
+      "Toplamı çevreden çıkararak üçüncü kenarın uzunluğunu bul."
+    ],
+    "fullExplanation": "Bu soruda verilen üçgenin çevresi 24 cm olduğu için üç kenarın toplamı da 24 cm olmalıdır. Verilen iki kenar uzunluğu 8 cm ve 10 cm olduğuna göre bu kenarları toplarsak 8 cm + 10 cm = 18 cm eder. Üçgenin çevresinden bu toplamı çıkararak üçüncü kenarın uzunluğunu bulabiliriz: 24 cm - 18 cm = 6 cm. Dolayısıyla üçüncü kenarın uzunluğu 6 cm olacaktır.",
+    "misconceptions": [
+      "Üçgenin çevresi kenar uzunluklarının toplamına eşit değildir.",
+      "Kenar uzunlukları toplandığında doğrudan üçüncü kenarı bulmak gerekir."
+    ]
+  },
+  "Math-9-Cebir-bnflix": {
+    "questionId": "Math-9-Cebir-bnflix",
+    "subject": "math",
+    "steps": [
+      "Verilen ifadeyi çarpanlarına ayırma yöntemini uygula.",
+      "İfadeyi çarpanlara ayırmak için x² - 5x + 6 ifadesini hangi iki sayının çarpımıyla elde edilebileceğini bul.",
+      "Bu iki sayıyı kullanarak çarpanları belirle."
+    ],
+    "fullExplanation": "Verilen ifade x² - 5x + 6, çarpanlarına ayrılmak istendiğinde (x - 2)(x - 3) şeklinde çarpanlara ayrılabilir. Çünkü x² ifadesi x ve x'in çarpımıyla elde edilir, 6 sayısı ise -2 ve -3 sayılarının çarpımıyla elde edilir. Dolayısıyla doğru cevap D seçeneğidir.",
+    "misconceptions": [
+      "Çarpanlara ayırma işlemi yapılırken x² teriminin katsayısı ile sabit terimin çarpımıyla elde edilen sayılar kullanılmalıdır.",
+      "Çarpanları belirlerken x terimlerinin katsayılarına dikkat edilmelidir."
+    ]
+  },
+  "Math-9-Sayı Teorisi-fjnqom": {
+    "questionId": "Math-9-Sayı Teorisi-fjnqom",
+    "subject": "math",
+    "steps": [
+      "√50'nin basitleştirilmesi",
+      "50'nin asal çarpanlarına ayrılması",
+      "Karekök işleminin uygulanması"
+    ],
+    "fullExplanation": "√50 ifadesini basitleştirmek için 50'nin asal çarpanlarına ayrılır. 50 = 2 * 5 * 5 = 2 * 5². Bu durumda √50 = √(2 * 5²) = 5√2 olur. Dolayısıyla, √50 ifadesi 5√2'ye eşittir. Seçenekler arasında doğru cevap C seçeneğidir.",
+    "misconceptions": [
+      "Öğrenciler genellikle 50'nin asal çarpanlarına doğru şekilde ayırmayabilirler.",
+      "Karekök işlemi uygulanırken asal çarpanların kareköklerinin çarpımı doğru hesaplanmalıdır."
+    ]
+  },
+  "Math-9-İstatistik-2o79ob": {
+    "questionId": "Math-9-İstatistik-2o79ob",
+    "subject": "math",
+    "steps": [
+      "Veri setindeki her bir sayının tekrar sayısını bul",
+      "En fazla tekrar eden sayıyı bul",
+      "Bu sayı mod olarak kabul edilir"
+    ],
+    "fullExplanation": "Veri setindeki sayılar: 3, 5, 7, 7, 9. 3 kez tekrar eden 7 sayısı en fazla tekrar eden sayıdır. Dolayısıyla mod 7'dir.",
+    "misconceptions": [
+      "Tüm sayıların eşit sıklıkta tekrar ettiği varsayımıyla yanlış mod hesaplamak"
+    ]
+  },
+  "Fizik-9-Kinetik Enerji-ty0s5t": {
+    "questionId": "Fizik-9-Kinetik Enerji-ty0s5t",
+    "subject": "physics",
+    "steps": [
+      "Kinetik enerjinin formülünü hatırla: KE = 0.5 * m * v^2",
+      "Cismin kütlesi iki katına çıkarıldığında, kinetik enerjideki değişimi hesapla",
+      "İlk durumda ve ikinci durumda kinetik enerjiyi karşılaştır",
+      "Sonucu yorumla ve doğru seçeneği belirle"
+    ],
+    "fullExplanation": "Bu soruyu çözmek için öncelikle kinetik enerjinin formülünü hatırlamalısın. Kinetik enerji, cismin kütlesi ve hızının karesi ile doğru orantılıdır. Cismin kütlesi iki katına çıkarıldığında, kinetik enerjisi de iki katına çıkar çünkü kinetik enerji kütlenin doğrusal olarak artmasıyla artar. Dolayısıyla, doğru cevap B seçeneği olan 'İki katına çıkar' olacaktır.",
+    "misconceptions": [
+      "Cismin hızıyla kütlesi arasında doğrudan bir ilişki olduğunu düşünmek",
+      "Kinetik enerjinin sadece hızla değil, kütlenin de etkisi olduğunu unutmak"
+    ]
+  },
+  "Fizik-9-Mekanik-t2ku8s": {
+    "questionId": "Fizik-9-Mekanik-t2ku8s",
+    "subject": "physics",
+    "steps": [
+      "Basit makinelerin ne olduğunu anla",
+      "Seçenekler arasında doğru olanı belirle",
+      "Doğru cevabı seç"
+    ],
+    "fullExplanation": "Basit makineler, gücü ve işi değiştirmek için kullanılan araçlardır. Bu makineler, kuvvetten kazanç sağlayarak iş yapmayı kolaylaştırır. Dolayısıyla, doğru cevap E seçeneğidir. Basit makineler, enerji tasarrufu sağlar ve hareketi kolaylaştırır. Kuvvet her zaman korunmaz ve iş miktarı artmaz. Bu nedenle, basit makinelerin temel amacı kuvvetten kazanç sağlamaktır.",
+    "misconceptions": [
+      "Basit makinelerin işi artırdığı düşünülür."
+    ]
+  },
+  "Fizik-9-Ses Dalgaları-3l4hyu": {
+    "questionId": "Fizik-9-Ses Dalgaları-3l4hyu",
+    "subject": "physics",
+    "steps": [
+      "Sesin yayılma hızının ortamda değiştiğini anla",
+      "Sesin yayılma hızının ortamın sıkılığına bağlı olduğunu fark et",
+      "Katı, sıvı, gaz, plazma ve vakum ortamlarının sıkılıklarını karşılaştır",
+      "En yüksek yayılma hızına sahip ortamı belirle"
+    ],
+    "fullExplanation": "Ses, bir ortamda titreşimlerin yayılmasıyla oluşan bir enerji formudur. Sesin yayılma hızı, ortamın sıkılığına bağlıdır. Sıkı bir ortamda ses daha hızlı yayılırken, daha seyreltik bir ortamda ses daha yavaş yayılır. Katılar genellikle daha sıkıdır ve sesin yayılma hızı en yüksek olan ortam katılardır. Bu nedenle, sesin yayılma hızı en yüksek katı ortamlarda gerçekleşir.",
+    "misconceptions": [
+      "Sıvıların ses yayılma hızı en yüksek olduğu yanlış bir inanış olabilir.",
+      "Vakumun sesin yayılmasına izin vermediği düşünülerek yanlış bir seçim yapılabilir."
+    ]
+  },
+  "Kimya-9-Gazlar-dtmbgi": {
+    "questionId": "Kimya-9-Gazlar-dtmbgi",
+    "subject": "chemistry",
+    "steps": [
+      "Verilen seçenekler arasında hangi gazın yanıcı özellik gösterdiğini belirle",
+      "Gazların yanıcı özellik gösterip göstermediğini bilmek için gazların özelliklerini göz önünde bulundur",
+      "Doğru cevabı seç"
+    ],
+    "fullExplanation": "Bu soruda hangi gazın yanıcı özellik gösterdiğini belirlememiz gerekiyor. Verilen seçenekler arasında oksijen, azot, karbondioksit, hidrojen ve helyum bulunmaktadır. Gazların yanıcı özellik gösterip göstermediğini bilmek için gazların özelliklerini bilmek önemlidir. Doğru cevap hidrojen gazıdır çünkü hidrojen gazı yanıcı özellik gösterir. Diğer seçenekler yanıcı özellik göstermezler.",
+    "misconceptions": [
+      "Oksijenin yanıcı özellik gösterdiği yanlış bir inanış olabilir",
+      "Azotun yanıcı özellik gösterdiği yanlış bir inanış olabilir"
+    ]
+  },
+  "Kimya-9-Çözeltiler-7ns4bx": {
+    "questionId": "Kimya-9-Çözeltiler-7ns4bx",
+    "subject": "chemistry",
+    "steps": [
+      "Seçenekleri inceleyerek çözücünün ne olduğunu anlamak",
+      "Çözücü kavramını hatırlamak ve doğru tanımlamak",
+      "Doğru cevabı seçmek"
+    ],
+    "fullExplanation": "Bu soruda çözeltiyi oluşturan çözücüyü belirlememiz isteniyor. Çözücü, çözeltide diğer maddeleri çözen ve çözeltinin ana bileşeni olan maddedir. Doğru cevap D seçeneği olan çözücü sıvıdır. Çünkü çözelti genellikle sıvı formunda olur ve çözücü sıvı, çözünen madde ise sıvı, katı veya gaz olabilir.",
+    "misconceptions": [
+      "Çözücü olarak çözünen maddeyi seçmek",
+      "Katı madde veya tuz gibi diğer maddeleri çözücü olarak düşünmek"
+    ]
+  },
+  "Math-9-Kümeler-j0zv5c": {
+    "questionId": "Math-9-Kümeler-j0zv5c",
+    "subject": "math",
+    "steps": [
+      "A ve B kümelerini birleştirmek için her bir elemanı tek tek yaz",
+      "A = {1, 3, 5} ve B = {2, 4, 6} olduğunu hatırla",
+      "A ve B kümelerini birleştirerek yeni bir küme oluştur",
+      "Oluşan yeni kümenin elemanlarını sırala"
+    ],
+    "fullExplanation": "Verilen A ve B kümelerini birleştirmek için her iki kümenin elemanlarını toplayarak yeni bir küme oluşturmalısın. A = {1, 3, 5} ve B = {2, 4, 6} olduğunu hatırlayarak, A ve B kümelerini birleştirerek {1, 3, 5, 2, 4, 6} kümesini elde edersin. Bu nedenle A ∪ B kümesi {1, 2, 3, 4, 5, 6} olacaktır.",
+    "misconceptions": [
+      "A ve B kümelerini sadece ortak elemanlarıyla birleştirmek gerektiği yanlış anlaşılabilir."
+    ]
+  },
+  "Math-9-İstatistik-k18c0k": {
+    "questionId": "Math-9-İstatistik-k18c0k",
+    "subject": "math",
+    "steps": [
+      "Verilen sayıların toplamını bul",
+      "Toplamı sayı adedine bölerek aritmetik ortalamayı hesapla",
+      "Sonucu seçeneklerle karşılaştır"
+    ],
+    "fullExplanation": "Verilen sayılar 5, 7, 9, 11. Bu sayıların toplamı 5 + 7 + 9 + 11 = 32. Bu sayıları toplam adedine bölerek aritmetik ortalamayı bulabiliriz. Yani, 32 / 4 = 8. Dolayısıyla, 5, 7, 9, 11 sayılarının aritmetik ortalaması 8'dir. Doğru cevap C seçeneğidir.",
+    "misconceptions": [
+      "Sayıların aritmetik ortalamasını bulurken toplamı sayı adedine bölmeyi unutmamak önemlidir."
+    ]
+  },
+  "Math-9-Trigonometri-yizbre": {
+    "questionId": "Math-9-Trigonometri-yizbre",
+    "subject": "math",
+    "steps": [
+      "Verilen açının bütünler açısını bulmak için 180°'den verilen açıyı çıkarın.",
+      "Verilen açı 75° olduğuna göre, bütünler açısı = 180° - 75°",
+      "Bütünler açısını hesaplayarak doğru seçeneği belirleyin."
+    ],
+    "fullExplanation": "Verilen açının bütünler açısını bulmak için 180°'den verilen açıyı çıkarırız. Yani, 180° - 75° = 105° olur. Dolayısıyla, 75° lik bir açının bütünler açısı 105° olacaktır. Doğru cevap C seçeneğidir.",
+    "misconceptions": [
+      "Öğrenciler bazen verilen açıyı bütünler açısından çıkarmak yerine toplarlar. Bu durumda yanlış sonuca ulaşabilirler."
+    ]
+  },
+  "Math-9-Denklemler-r0o4t5": {
+    "questionId": "Math-9-Denklemler-r0o4t5",
+    "subject": "math",
+    "steps": [
+      "Denklemde verilen x + 2/3 = 5 ifadesini çözerek x'i bul",
+      "x + 2/3 = 5 denkleminde 2/3'ü x'ten çıkarmak için x + 2/3 - 2/3 = 5 - 2/3 işlemi yap",
+      "x = 5 - 2/3 işlemini gerçekleştir",
+      "x'i basit bir şekilde hesapla"
+    ],
+    "fullExplanation": "Verilen denklemde x + 2/3 = 5 olduğu belirtilmiş. Bu denklemde x'i bulmak için öncelikle x + 2/3 ifadesini 5'e eşitlememiz gerekiyor. x + 2/3 = 5 denkleminde 2/3'ü x'ten çıkarmak için x + 2/3 - 2/3 = 5 - 2/3 işlemini gerçekleştiriyoruz. Böylece x = 5 - 2/3 işlemi sonucunda x'i bulmuş oluyoruz. Son adımda ise x'i basit bir şekilde hesaplayarak doğru cevabı elde ediyoruz.",
+    "misconceptions": [
+      "Denklemlerde işlem yaparken kesirleri dikkatlice ele almak önemlidir. Kesirlerin işlem sırasında doğru şekilde çıkarılması gerekmektedir."
+    ]
+  },
+  "Math-9-Fonksiyonlar-7bmx7k": {
+    "questionId": "Math-9-Fonksiyonlar-7bmx7k",
+    "subject": "math",
+    "steps": [
+      "Verilen fonksiyon f(x) = 2x + 3'ü kullanarak f(4) değerini bul",
+      "x'in yerine 4'ü koyarak f(4) hesapla",
+      "f(4) = 2 * 4 + 3 işlemi ile sonucu bul",
+      "f(4) = 8 + 3 = 11"
+    ],
+    "fullExplanation": "Verilen fonksiyon f(x) = 2x + 3, x'in yerine 4'ü koyarak f(4) değerini bulabiliriz. f(4) = 2 * 4 + 3 işlemini yaparak sonucu elde ederiz. Bu durumda f(4) = 8 + 3 = 11 olacaktır. Dolayısıyla, f(4) değeri 11'dir.",
+    "misconceptions": [
+      "Fonksiyonun x değerini yerine koyarken işlem sırasını karıştırmak",
+      "İşlem adımlarını doğru uygulamamak"
+    ]
+  },
+  "Kimya-9-Element Sembolleri-qqy0zu": {
+    "questionId": "Kimya-9-Element Sembolleri-qqy0zu",
+    "subject": "chemistry",
+    "steps": [
+      "Verilen element sembollerini kontrol et",
+      "Doğru element sembollerini bilmek için periyodik tabloyu kullan",
+      "Sodyum elementinin sembolünü doğru şekilde belirle"
+    ],
+    "fullExplanation": "Verilen seçenekler arasında sodyumun sembolü yanlış verilmiştir. Periyodik tabloya bakarak sodyumun sembolünün Na olduğunu görebiliriz. Dolayısıyla doğru cevap E seçeneğidir.",
+    "misconceptions": [
+      "Öğrenciler sodyumun sembolünü yanlış hatırlayabilirler."
+    ]
+  },
+  "Biyoloji-9-Sindirim Sistemi-l6wbgt": {
+    "questionId": "Biyoloji-9-Sindirim Sistemi-l6wbgt",
+    "subject": "biology",
+    "steps": [
+      "Soru metnini dikkatlice oku.",
+      "Sindirim sisteminde besinlerin kimyasal sindirimi nerede başlar sorusuna odaklan.",
+      "Seçenekleri incele ve hangi organda kimyasal sindirimin başladığını belirle.",
+      "Doğru cevabı seç."
+    ],
+    "fullExplanation": "Sindirim sisteminde besinlerin kimyasal sindirimi ağızda başlar. Ağızda bulunan tükürük bezleri tarafından salgılanan enzimler (amilaz) besinlerin kimyasal sindirimine yardımcı olur. Bu süreçte karbonhidratlar parçalanmaya başlar. Dolayısıyla, besinlerin kimyasal sindirimi ağızda başlar ve bu nedenle doğru cevap C seçeneğidir.",
+    "misconceptions": [
+      "Besinlerin kimyasal sindirimi sadece midede başlar.",
+      "Tükürük sadece besinlerin mekanik sindirimine yardımcı olur, kimyasal sindirimde rolü yoktur."
+    ]
+  },
+  "Fizik-9-Hal Değişimi-dsvck1": {
+    "questionId": "Fizik-9-Hal Değişimi-dsvck1",
+    "subject": "physics",
+    "steps": [
+      "Buzun erimesi sırasında sıcaklık değişmez çünkü latent ısı kullanılır.",
+      "Latent ısı, madde bir fazdan diğerine geçerken absorbe veya salınan ısıdır.",
+      "Buzun erimesi sırasında, buzun sıcaklığı 0°C'de sabit kalır çünkü buzun erimesi için gerekli olan ısı, latent ısı olarak kullanılır."
+    ],
+    "fullExplanation": "Buzun erimesi sırasında sıcaklık neden değişmez sorusunun cevabı D seçeneğidir. Buzun erimesi sırasında sıcaklık sabit kalır çünkü buzun erimesi için gerekli olan ısı, latent ısı olarak adlandırılan ve sıcaklık değişimine neden olmayan bir tür ısıdır. Bu nedenle, buzun erimesi sırasında sıcaklık 0°C'de sabit kalır.",
+    "misconceptions": [
+      "Buzun erimesi sırasında sıcaklık değişmez çünkü ısı kaybı olmaz düşüncesi yanlıştır. Isı kaybı olabilir ancak bu latent ısı olarak kullanılır ve sıcaklık değişmez.",
+      "Buzun erimesi sırasında sıcaklık değişmez çünkü kinetik enerji artar düşüncesi yanlıştır. Buzun erimesi sırasında kinetik enerji değil latent ısı kullanılır ve sıcaklık sabit kalır."
+    ]
+  },
+  "Fizik-9-Optik-lyqbzs": {
+    "questionId": "Fizik-9-Optik-lyqbzs",
+    "subject": "physics",
+    "steps": [
+      "Işığın kırılma olayının hangi ortamlar arasında gerçekleştiğini belirle",
+      "Farklı yoğunluktaki ortamlar arasında kırılma olayının gözlemlendiğini hatırla",
+      "Doğru cevabı seç: B) Farklı yoğunluktaki ortamlar arasında"
+    ],
+    "fullExplanation": "Işığın kırılma olayı, farklı yoğunluktaki ortamlar arasında gerçekleşir. Işık, bir ortamdan diğerine geçerken hızı ve yönü değişir ve bu durum kırılma olarak adlandırılır. Örneğin, havadan cam ya da suya geçişte kırılma olayı gözlemlenebilir. Bu nedenle doğru cevap B seçeneğidir.",
+    "misconceptions": [
+      "Işık kırılma olayının sadece aynı ortamda gerçekleştiği düşünülebilir. Ancak farklı yoğunluktaki ortamlar arasında da kırılma olayı gözlemlenir."
+    ]
+  },
+  "Fizik-9-Enerji Hesaplama-pkzl2j": {
+    "questionId": "Fizik-9-Enerji Hesaplama-pkzl2j",
+    "subject": "physics",
+    "steps": [
+      "Verilen güç değerini ve çalışma süresini birleştirerek enerji tüketimini hesapla",
+      "Watt cinsinden verilen enerjiyi kWh cinsine dönüştür",
+      "Sonucu bulunan enerji tüketimini doğru seçenekle karşılaştır"
+    ],
+    "fullExplanation": "Verilen soruda 1000 Watt'lık bir cihazın 2 saat boyunca çalıştığı belirtiliyor. Enerji tüketimini hesaplamak için güç (Watt) ve süre (saat) değerlerini çarparız. 1000 Watt x 2 saat = 2000 Watt-saat. Bu değeri kWh cinsine dönüştürmek için 2000'ı 1000'e bölerek 2 kWh elde ederiz. Doğru cevap D seçeneği olan 2 kWh olacaktır.",
+    "misconceptions": [
+      "Watt ve kWh arasındaki dönüşümü karıştırmak",
+      "Güç ve süre değerlerini yanlış birleştirmek"
+    ]
+  },
+  "Kimya-9-Elektroliz-d18c3e": {
+    "questionId": "Kimya-9-Elektroliz-d18c3e",
+    "subject": "chemistry",
+    "steps": [
+      "Elektroliz nedir?",
+      "Suyun elektrolizi nasıl gerçekleşir?",
+      "Hangi gazlar suyun elektrolizi sonucu açığa çıkar?"
+    ],
+    "fullExplanation": "1. Elektroliz, elektrik akımı kullanılarak bir bileşiğin ayrıştırılması işlemidir.\n2. Suyun elektrolizi sırasında su molekülleri, elektrik akımıyla ayrışarak hidrojen ve oksijen gazlarına dönüşür.\n3. Elektrolizde, suyun anot ve katot olmak üzere iki elektrot arasında ayrışması sonucunda hidrojen gazı katotta, oksijen gazı ise anotta açığa çıkar.\n4. Dolayısıyla, suyun elektrolizi sonucu açığa çıkan gazlar H₂ ve O₂ gazlarıdır.",
+    "misconceptions": [
+      "Suyun elektrolizi sonucu açığa çıkan gazların karbondioksit (CO₂) ve oksijen (O₂) olduğu yanlış bir inanış olabilir."
+    ]
+  },
+  "Fizik-9-Basit Makineler-mwfz6v": {
+    "questionId": "Fizik-9-Basit Makineler-mwfz6v",
+    "subject": "physics",
+    "steps": [
+      "Basit makinelerin temel amacını anlamak",
+      "Seçenekleri incelemek",
+      "Doğru cevabı seçmek"
+    ],
+    "fullExplanation": "Basit makineler, kuvvetten kazanç sağlamak için kullanılır. Yani, bir kuvvet uygulandığında daha büyük bir kuvvet elde etmek veya kuvveti belirli bir mesafeye uygulamak için kullanılırlar. Bu sayede iş yapma kolaylaşır ve daha az kuvvet harcanır. Dolayısıyla, basit makine kullanmanın temel amacı kuvvetten kazanç sağlamaktır.",
+    "misconceptions": [
+      "Basit makinelerin amacı enerjiyi artırmak değil, kuvvetten kazanç sağlamaktır."
+    ]
+  },
+  "Biyoloji-9-Fotosentez-1a90wv": {
+    "questionId": "Biyoloji-9-Fotosentez-1a90wv",
+    "subject": "biology",
+    "steps": [
+      "Fotosentez denklemi seçenekleri incele",
+      "Her seçeneğin sol tarafındaki element sayılarını kontrol et",
+      "Her seçeneğin sağ tarafındaki element sayılarını kontrol et",
+      "Doğru denklemi seç"
+    ],
+    "fullExplanation": "Fotosentez, bitkilerin güneş enerjisini kullanarak karbondioksit ve suyu glikoza dönüştürdüğü bir süreçtir. Doğru fotosentez denklemi şu şekildedir: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. Bu denklemde karbondioksit ve su, güneş enerjisiyle glikoza ve oksijene dönüşmektedir. Bu süreç bitkilerin beslenmesi ve oksijen üretimi için önemlidir.",
+    "misconceptions": [
+      "Fotosentez denklemi karıştırılabilir, doğru denklemi dikkatlice seçmek önemlidir."
+    ]
+  },
+  "Biyoloji-9-Vitaminler-eiwwru": {
+    "questionId": "Biyoloji-9-Vitaminler-eiwwru",
+    "subject": "biology",
+    "steps": [
+      "Seçenekleri incele ve hangi vitaminin kemik gelişiminde rol oynadığını hatırla.",
+      "Doğru cevabı seç (D - D vitamini).",
+      "D vitamini kemik gelişiminde önemli bir rol oynar, çünkü vücutta kalsiyum ve fosforun emilimini sağlar.",
+      "Kemiklerin güçlenmesi ve sağlıklı gelişimi için D vitamini alımı önemlidir."
+    ],
+    "fullExplanation": "Bu soruda hangi vitaminin kemik gelişiminde önemli rol oynadığını bilmemiz gerekiyor. Doğru cevap D vitaminidir. D vitamini vücutta kalsiyum ve fosforun emilimini sağlayarak kemiklerin güçlenmesi ve sağlıklı gelişimi için önemli bir rol oynar. Bu nedenle D vitamini kemik sağlığı açısından oldukça önemlidir.",
+    "misconceptions": [
+      "D vitamini sadece kemikler için değil, genel sağlık için de önemlidir.",
+      "D vitamini eksikliği kemiklerde zayıflık ve hastalıklara neden olabilir."
+    ]
+  },
+  "Biyoloji-9-Hücre Yapısı-mpcsre": {
+    "questionId": "Biyoloji-9-Hücre Yapısı-mpcsre",
+    "subject": "biology",
+    "steps": [
+      "Hücre zarının yapısını anlamak",
+      "Organik bileşiklerin hücre zarındaki rolünü anlamak",
+      "Seçenekleri inceleyerek doğru organik bileşiği belirlemek"
+    ],
+    "fullExplanation": "Hücre zarı, hücreyi çevreleyen ve hücre içindeki yapıları koruyan bir zar yapısıdır. Hücre zarının yapısında bulunan organik bileşikler, zarın esnekliğini ve işlevselliğini sağlar. Seçenekler arasında nişasta bitkilerde depo karbonhidratıdır, selüloz bitki hücre duvarında bulunur, proteinler hücre zarında taşıyıcı ve yapısal rolleri vardır, kitin böceklerin dış iskeletinde bulunur ve glikojen hayvanlarda depo karbonhidratıdır. Dolayısıyla, hücre zarının yapısında bulunan organik bileşik proteinlerdir.",
+    "misconceptions": [
+      "Hücre zarının yapısında bulunan organik bileşiğin sadece enerji depolama için kullanılan karbonhidratlar olduğunu düşünmek",
+      "Hücre zarının yapısında bulunan organik bileşiğin sadece bitkilerde bulunan bileşikler olduğunu düşünmek"
+    ]
+  },
+  "Biyoloji-9-Hücre Organelleri-ifo402": {
+    "questionId": "Biyoloji-9-Hücre Organelleri-ifo402",
+    "subject": "biology",
+    "steps": [
+      "Soru metnini dikkatlice oku",
+      "Seçenekleri incele ve her bir organelin görevini hatırla",
+      "Protein sentezinden sorumlu olan organeli belirle"
+    ],
+    "fullExplanation": "Bu soruda hangi organelin protein sentezinden sorumlu olduğunu bulmamız isteniyor. Protein sentezi ribozomlarda gerçekleşir. Dolayısıyla doğru cevap A seçeneği olan Ribozomdur.",
+    "misconceptions": [
+      "Mitokondri ve Golgi gibi diğer organeler de hücrede önemli görevlere sahip olsalar da protein sentezinden sorumlu değillerdir."
+    ]
+  },
+  "Biyoloji-9-Hücre Bölünmesi-9zdgmh": {
+    "questionId": "Biyoloji-9-Hücre Bölünmesi-9zdgmh",
+    "subject": "biology",
+    "steps": [
+      "Mitoz bölünmenin ne olduğunu anla.",
+      "Mitoz bölünmenin amaçlarını ve hangi hücrelerde gerçekleştiğini öğren.",
+      "Seçenekleri incele ve mitoz bölünmenin hangi tür hücrelerde gerçekleştiğini belirle."
+    ],
+    "fullExplanation": "Mitoz bölünme, bir hücrenin çekirdeğinin bölünerek aynı genetik materyalin iki ayrı hücreye dağılması sürecidir. Bu süreç, vücut hücrelerinde gerçekleşir ve hücrelerin büyümesi, onarılması ve yenilenmesi için önemlidir. Sperm ve yumurta hücreleri ise üreme hücreleri olduğu için mayoz bölünme ile çoğalırlar. Sinir hücreleri ve kas hücreleri ise özelleşmiş hücrelerdir ve mitoz bölünme ile çoğalmazlar. Dolayısıyla, mitoz bölünme vücut hücrelerinde gerçekleşir.",
+    "misconceptions": [
+      "Sperm ve yumurta hücrelerinin mitoz bölünme ile çoğaldığı düşünülebilir.",
+      "Tüm hücrelerin mitoz bölünme ile çoğaldığı yanlış bir inanış olabilir."
+    ]
+  },
+  "Biyoloji-9-Bitki Hücresi-4yxgne": {
+    "questionId": "Biyoloji-9-Bitki Hücresi-4yxgne",
+    "subject": "biology",
+    "steps": [
+      "Verilen seçenekleri incele",
+      "Bitki hücresinin yapısal özelliklerini hatırla",
+      "Hangi yapı bitki hücresinde bulunmazı belirle"
+    ],
+    "fullExplanation": "Verilen seçenekler arasında bitki hücresinde bulunmayan yapıyı belirlemek için bitki hücresinin yapısal özelliklerini bilmek önemlidir. Bitki hücresinde hücre duvarı, kloroplast, koful ve çekirdek bulunurken, sentriyol bulunmaz. Sentriyol, hayvan hücrelerinde bulunan bir yapıdır ve bitki hücresinde yer almaz. Dolayısıyla, doğru cevap D seçeneği olan Sentriyol'dur.",
+    "misconceptions": [
+      "Sentriyolun bitki hücresinde de bulunduğu yanlış bir inanış olabilir."
+    ]
+  },
+  "Math-9-Cebir-bd89": {
+    "questionId": "Math-9-Cebir-bd89",
+    "subject": "math",
+    "steps": [
+      "Verilen eşitsizliği çözmek için öncelikle 2x - 4 > 10 eşitsizliğini çözmeliyiz.",
+      "İlk olarak, 2x - 4 = 10 eşitliğini kurarak denklemi çözelim.",
+      "2x = 10 + 4 olarak düzenleyerek x'in değerini bulalım.",
+      "Son adımda x'in değerini bulduktan sonra eşitsizliği sağlayan x değerlerini belirleyelim."
+    ],
+    "fullExplanation": "Verilen eşitsizlik 2x - 4 > 10'dur. İlk olarak, eşitsizliği eşitlik haline getirerek 2x - 4 = 10 şeklinde yazıyoruz. Bu durumda 2x = 10 + 4 olur ve 2x = 14 elde edilir. x'in değerini bulmak için ise 2x = 14'den x = 7 bulunur. Son adımda ise x'in 7'den büyük olması gerektiği eşitsizliği sağlar. Dolayısıyla çözüm kümesi x > 7 olacaktır.",
+    "misconceptions": [
+      "Öğrenciler denklemleri eşitsizliklerle karıştırabilirler.",
+      "İşlem adımlarında dikkatli olunmazsa yanlış sonuçlar elde edilebilir."
+    ]
+  },
+  "Math-9-Oran-Orantı-hill4b": {
+    "questionId": "Math-9-Oran-Orantı-hill4b",
+    "subject": "math",
+    "steps": [
+      "İlk olarak 15 işçinin bir işi 20 günde bitirdiğini biliyoruz. Bu bilgiyi kullanarak işin toplam süresini bulacağız.",
+      "İşçi sayısını ve işin süresini kullanarak işin birim iş miktarını hesaplayacağız.",
+      "Birim iş miktarını kullanarak 30 işçinin aynı işi kaç günde bitireceğini bulacağız."
+    ],
+    "fullExplanation": "Verilen bilgilere göre, 15 işçi bir işi 20 günde bitiriyor. Bu durumda 15 işçinin 1 günde yaptığı iş miktarı 1/20 olacaktır. 30 işçinin aynı işi kaç günde bitireceğini bulmak için 30 işçinin 1 günde yaptığı iş miktarını hesaplayacağız. 15 işçinin 1 günde yaptığı iş miktarı 1/20 olduğuna göre, 30 işçinin 1 günde yaptığı iş miktarı 2*(1/20) = 1/10 olacaktır. Dolayısıyla, 30 işçi aynı işi 10 günde bitirecektir.",
+    "misconceptions": [
+      "İşçi sayısı arttıkça işin süresinin azalacağı yanılgısına düşebilirler."
+    ]
+  },
+  "Math-9-Cebir-si3fzm": {
+    "questionId": "Math-9-Cebir-si3fzm",
+    "subject": "math",
+    "steps": [
+      "Verilen orantıyı kullanarak x'in değerini bul",
+      "3/5 = x/20 orantısını çözerek x'i bul",
+      "Çözümü kontrol et"
+    ],
+    "fullExplanation": "Verilen orantıda 3/5 = x/20 olduğu belirtilmiş. Bu orantıyı çözmek için önce verilen orantıyı kullanarak x'in değerini bulmalıyız. 3/5 = x/20 oranını çözerek x'in değerini bulduğumuzda x = 12 olduğunu görürüz. Dolayısıyla doğru cevap C seçeneğidir.",
+    "misconceptions": [
+      "Öğrenciler orantı sorularında oranları doğru bir şekilde karşılaştırmada zorlanabilirler."
+    ]
+  },
+  "Math-9-Cebir-846iz": {
+    "questionId": "Math-9-Cebir-846iz",
+    "subject": "math",
+    "steps": [
+      "10 ile 20 arasındaki sayıları tek tek kontrol et",
+      "Her sayı için asal olup olmadığını kontrol et",
+      "Asal sayıları say ve adedini bul"
+    ],
+    "fullExplanation": "10 ile 20 arasındaki asal sayıları bulmak için verilen aralıktaki her sayıyı tek tek kontrol etmek gerekmektedir. Bir sayının asal olup olmadığını kontrol etmek için sayının kendisinden küçük pozitif tam sayılara bölünüp bölünmediği kontrol edilir. Eğer bir sayı sadece 1 ve kendisine bölünüyorsa o sayı asal sayıdır. Verilen aralıkta 11, 13, 17 ve 19 asal sayılardır. Dolayısıyla 10 ile 20 arasında 4 adet asal sayı bulunmaktadır.",
+    "misconceptions": [
+      "Asal sayıların sadece 1'e ve kendisine bölünebileceği unutulabilir.",
+      "Verilen aralıktaki her sayının asal olup olmadığını kontrol etmek önemlidir."
+    ]
+  },
+  "Math-9-Geometri-ctgn8s": {
+    "questionId": "Math-9-Geometri-ctgn8s",
+    "subject": "math",
+    "steps": [
+      "Karenin alan formülünü hatırla: Alan = kenar uzunluğu * kenar uzunluğu",
+      "Verilen alanı kullanarak kenar uzunluğunu bul",
+      "Karenin çevresini hesapla: Çevre = 4 * kenar uzunluğu"
+    ],
+    "fullExplanation": "Bu soruda verilen karenin alanı 64 cm² olduğu için, kenar uzunluğunu bulmak için kök alma işlemi yapmamız gerekmektedir. Alan = kenar uzunluğu * kenar uzunluğu formülünü kullanarak kenar uzunluğunu bulduktan sonra, karenin çevresini hesaplamak için kenar uzunluğunu 4 ile çarparız. Sonuç olarak, karenin çevresi 32 cm olacaktır.",
+    "misconceptions": [
+      "Karenin çevresini alanın karekökü ile bulmak gerektiği yanlış bir inanış olabilir."
+    ]
+  },
+  "Biyoloji-9-Genetik-f5md5q": {
+    "questionId": "Biyoloji-9-Genetik-f5md5q",
+    "subject": "biology",
+    "steps": [
+      "Seçenekleri inceleyerek genetik bilgiyi taşıyan molekülü belirle",
+      "Doğru cevabı seç",
+      "Cevabını kontrol et"
+    ],
+    "fullExplanation": "Genetik bilgiyi taşıyan molekül DNA'dır. DNA, hücrelerimizde bulunan ve genetik bilgiyi depolayan bir moleküldür. Diğer seçenekler olan Protein, Lipit, Karbonhidrat ve ATP ise hücrelerde farklı görevleri olan moleküllerdir. Dolayısıyla, genetik bilgiyi taşıyan molekül DNA'dır ve doğru cevap seçeneği A'dır.",
+    "misconceptions": [
+      "Proteinin genetik bilgiyi taşıdığı yanlış bir inanç olabilir.",
+      "ATP'nin genetik bilgiyi taşıdığı düşünülebilir ancak ATP enerji taşıyan bir moleküldür, genetik bilgiyi taşımaz."
+    ]
+  },
+  "Biyoloji-9-Fotosentez-8b4dtk": {
+    "questionId": "Biyoloji-9-Fotosentez-8b4dtk",
+    "subject": "biology",
+    "steps": [
+      "Fotosentez sürecini hatırla",
+      "Fotosentez sırasında hangi gazın kullanıldığını düşün",
+      "Hangi gazın açığa çıktığını belirle"
+    ],
+    "fullExplanation": "Fotosentez, bitkilerin güneş ışığını kullanarak besin ürettiği bir süreçtir. Bu süreçte bitkiler karbondioksit (CO2) ve su (H2O) kullanarak glikoz ve oksijen üretirler. Dolayısıyla fotosentez sırasında oksijen gazı açığa çıkar. Bu nedenle doğru cevap A seçeneği olan oksijendir.",
+    "misconceptions": [
+      "Öğrenciler karbondioksitin açığa çıktığını yanlışlıkla düşünebilirler.",
+      "Fotosentez sırasında açığa çıkan gazın oksijen olduğunu hatırlamak önemlidir."
+    ]
+  },
+  "Biyoloji-9-DNA Yapısı-qxt5kz": {
+    "questionId": "Biyoloji-9-DNA Yapısı-qxt5kz",
+    "subject": "biology",
+    "steps": [
+      "DNA'nın yapı birimini tanımla",
+      "Verilen seçenekleri incele",
+      "Doğru cevabı seç",
+      "Doğru cevabı doğrulamak için DNA'nın yapısını anla"
+    ],
+    "fullExplanation": "DNA'nın yapı birimi nükleotiddir. Nükleotid, bir şeker molekülü, bir fosfat grubu ve bir azotlu bazın birleşiminden oluşur. DNA molekülü, nükleotidlerin bir araya gelmesiyle oluşur. Her nükleotid, adenin (A), timin (T), guanin (G) veya sitozin (C) adı verilen azotlu bazlardan birini içerir. Dolayısıyla, DNA'nın temel yapı taşı nükleotidlerdir.",
+    "misconceptions": [
+      "DNA'nın yapı biriminin amino asit olduğu yanlış bir inanış olabilir.",
+      "DNA'nın yapısını anlamadan doğru cevabı seçmek zor olabilir."
+    ]
+  },
+  "Fizik-9-Dalgalar-431iup": {
+    "questionId": "Fizik-9-Dalgalar-431iup",
+    "subject": "physics",
+    "steps": [
+      "Ses dalgalarının türünü belirlemek için dalgaların genel sınıflandırmasını hatırla.",
+      "Ses dalgalarının madde ortamında yayıldığını unutma.",
+      "Ses dalgalarının enine dalga türüne ait olduğunu hatırla.",
+      "Verilen seçenekler arasından enine dalga türüne ait olanı seç.",
+      "Doğru cevabı kontrol et."
+    ],
+    "fullExplanation": "Ses dalgaları, madde ortamında yayılan ve parçacıkların titreşim yönüne dik olarak ilerleyen enine dalgalardır. Bu nedenle, ses dalgaları enine dalga türüne aittir. Verilen seçenekler arasından enine dalga türüne ait olan seçenek 'E) Boyuna' dur. Dolayısıyla, ses dalgaları 'E) Boyuna' türündedir.",
+    "misconceptions": [
+      "Ses dalgalarının elektromanyetik dalga türüne ait olduğunu karıştırmak.",
+      "Ses dalgalarının sadece titreşim olduğunu düşünmek."
+    ]
+  },
+  "Fizik-9-Serbest Düşme-kvekj3": {
+    "questionId": "Fizik-9-Serbest Düşme-kvekj3",
+    "subject": "physics",
+    "steps": [
+      "Serbest düşen cisim için hava direnci olmadığından ivme sabittir",
+      "Hava direnci olmadığı için cisim sabit hızla düşmez, hızı artar",
+      "Kütlesi sabit olduğundan kütlesi artmaz",
+      "Enerjisi sabit olduğundan enerjisi azalmaz",
+      "Yörüngesi değişmez, düşüş hareketi düz bir çizgi üzerindedir"
+    ],
+    "fullExplanation": "Hava direnci olmayan bir ortamda serbest düşen cisim için ivme sabittir çünkü hava direnci olmadığı için cismin hızı sabit değildir, hızı artar. Cismin kütlesi sabit olduğundan kütlesi artmaz. Enerjisi de sabit olduğundan enerjisi azalmaz. Yörüngesi değişmez çünkü düşüş hareketi düz bir çizgi üzerindedir.",
+    "misconceptions": [
+      "Hava direnci olmadığında cismin hızı sabit olmalıdır düşüncesi"
+    ]
+  },
+  "Fizik-9-Optik-88rmdt": {
+    "questionId": "Fizik-9-Optik-88rmdt",
+    "subject": "physics",
+    "steps": [
+      "1. Verilen bilgiyi anla: Bir aynada görüntü boyu cismin boyuna eşitse ne anlama gelir?",
+      "2. Ayna türlerini hatırla: Çukur, düz, tümsek, silindirik ve küresel ayna türleri nelerdir?",
+      "3. Hangi ayna türünde görüntü boyu cismin boyuna eşit olabilir?",
+      "4. Doğru cevabı seç: Hangi ayna türü soruda verilen durumu karşılar?"
+    ],
+    "fullExplanation": "Bir aynada görüntü boyu cismin boyuna eşit olduğunda, bu durum düz aynaya denk gelir. Düz aynalarda görüntü, cismin boyuna eşit olarak oluşur. Diğer ayna türlerinde ise görüntü farklı büyüklüklerde oluşur. Dolayısıyla, verilen durumda ayna türü düz aynadır.",
+    "misconceptions": [
+      "Aynaların yalnızca çukur veya tümsek olabileceği düşüncesi",
+      "Görüntü boyunun cisim boyuna eşit olmasının sadece çukur aynalarda geçerli olduğu yanılgısı"
+    ]
+  },
+  "Fizik-9-Isı ve Sıcaklık-54b21b": {
+    "questionId": "Fizik-9-Isı ve Sıcaklık-54b21b",
+    "subject": "physics",
+    "steps": [
+      "Verilen seçenekler arasında ısı birimi olmayanı bulmak için seçenekleri tek tek inceleyin.",
+      "Isı birimi olan birimler Joule, Kalori, Kilojoule ve Erg'dir. Bu birimler ısıyı ölçmek için kullanılır.",
+      "Newton birimi ise kuvveti ölçmek için kullanılan bir birimdir. Dolayısıyla, Newton ısı birimi değildir ve doğru cevap C seçeneğidir."
+    ],
+    "fullExplanation": "Verilen seçenekler arasında hangisinin ısı birimi olmadığını bulmak için seçenekleri incelememiz gerekiyor. Isı birimleri genellikle Joule, Kalori, Kilojoule ve Erg şeklinde ifade edilir. Ancak Newton birimi kuvveti ölçmek için kullanılan bir birimdir, ısı birimi değildir. Bu nedenle doğru cevap C seçeneğidir.",
+    "misconceptions": [
+      "Öğrenciler Newton'un ısı birimi olduğunu düşünebilirler. Ancak Newton kuvvet birimidir, ısı birimi değildir."
+    ]
+  }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small PDF Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        #status {
+            margin: 20px 0;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+        #canvas-container {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        button {
+            padding: 8px 16px;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        progress {
+            width: 100%;
+            height: 20px;
+            margin: 10px 0;
+        }
+    </style>
+    <!-- Load PDF.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+</head>
+<body>
+    <h1>Small PDF Test</h1>
+    <p>This test uses a small sample PDF from a CDN to test if the issue is specific to your large PDF file.</p>
+    
+    <div>
+        <button id="loadSmallPdf">Load Small PDF from CDN</button>
+        <button id="loadLocalPdf">Load Local PDF</button>
+    </div>
+    
+    <progress id="loadProgress" value="0" max="100"></progress>
+    <div id="status">Ready to load PDF...</div>
+    
+    <div id="canvas-container">
+        <canvas id="pdf-canvas"></canvas>
+    </div>
+    
+    <script>
+        // Set worker location
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+        
+        const canvas = document.getElementById('pdf-canvas');
+        const ctx = canvas.getContext('2d');
+        const statusDiv = document.getElementById('status');
+        const loadProgress = document.getElementById('loadProgress');
+        
+        // Small sample PDF from CDN
+        const samplePdfUrl = 'https://raw.githubusercontent.com/mozilla/pdf.js/master/web/compressed.tracemonkey-pldi-09.pdf';
+        // Your local PDF
+        const localPdfUrl = '/pdfs/matematik-9.pdf';
+        
+        function updateStatus(message) {
+            statusDiv.textContent = message;
+            console.log(message);
+        }
+        
+        function loadPDF(pdfUrl) {
+            updateStatus(`Loading PDF: ${pdfUrl}`);
+            loadProgress.value = 0;
+            
+            // Configure loading options
+            const loadingOptions = {
+                url: pdfUrl,
+                disableRange: false,
+                disableStream: false,
+                disableAutoFetch: false,
+                rangeChunkSize: 32768
+            };
+            
+            // Log the options
+            console.log('Loading options:', loadingOptions);
+            
+            // Create loading task
+            const loadingTask = pdfjsLib.getDocument(loadingOptions);
+            
+            // Track loading progress
+            loadingTask.onProgress = function(data) {
+                if (data.total) {
+                    const percent = (data.loaded / data.total) * 100;
+                    loadProgress.value = percent;
+                    updateStatus(`Loading: ${Math.round(percent)}% (${data.loaded}/${data.total} bytes)`);
+                } else {
+                    updateStatus(`Loading: ${data.loaded} bytes`);
+                }
+            };
+            
+            // Handle successful loading
+            loadingTask.promise.then(function(pdf) {
+                updateStatus(`PDF loaded successfully. Number of pages: ${pdf.numPages}`);
+                
+                // Render the first page
+                pdf.getPage(1).then(function(page) {
+                    const viewport = page.getViewport({ scale: 1.5 });
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    
+                    const renderContext = {
+                        canvasContext: ctx,
+                        viewport: viewport
+                    };
+                    
+                    updateStatus('Rendering page 1...');
+                    page.render(renderContext).promise.then(function() {
+                        updateStatus('Page rendered successfully.');
+                    }).catch(function(error) {
+                        updateStatus(`Error rendering page: ${error}`);
+                    });
+                }).catch(function(error) {
+                    updateStatus(`Error getting page: ${error}`);
+                });
+            }).catch(function(error) {
+                updateStatus(`Error loading PDF: ${error}`);
+                console.error('Error details:', error);
+            });
+        }
+        
+        // Add event listeners to buttons
+        document.getElementById('loadSmallPdf').addEventListener('click', function() {
+            loadPDF(samplePdfUrl);
+        });
+        
+        document.getElementById('loadLocalPdf').addEventListener('click', function() {
+            loadPDF(localPdfUrl);
+        });
+    </script>
+</body>
+</html> 
