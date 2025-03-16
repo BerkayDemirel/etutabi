@@ -97,14 +97,26 @@ export function QuestionDisplay({
                     ? "border-red-500 bg-red-50 dark:bg-red-950/20"
                     : hasSubmitted && selectedAnswer === index && selectedAnswer !== question.correctAnswerIndex
                     ? "border-red-500 bg-red-50 dark:bg-red-950/20"
+                    : selectedAnswer === index && !hasSubmitted
+                    ? "border-primary bg-primary/10 text-primary font-medium"
                     : "hover:bg-muted/50"
                 } ${!hasSubmitted ? "cursor-pointer" : ""}`}
                 onClick={() => handleOptionClick(index)}
               >
                 <div className="flex items-center h-full w-full">
-                  <div className="flex items-center justify-center h-4 w-4 rounded-full border mr-2">
+                  <div className={`flex items-center justify-center h-4 w-4 rounded-full border mr-2 ${
+                    selectedAnswer === index && !hasSubmitted ? "border-primary" : ""
+                  }`}>
                     {selectedAnswer === index && (
-                      <div className="h-2 w-2 rounded-full bg-primary" />
+                      <div 
+                        className="rounded-full" 
+                        style={{
+                          width: '10px',
+                          height: '10px',
+                          backgroundColor: '#6366f1',
+                          opacity: 1
+                        }} 
+                      />
                     )}
                   </div>
                   <span className="flex-1 text-sm">{option}</span>

@@ -218,7 +218,7 @@ export function TopicPage() {
         </div>
 
         {/* Main content area */}
-        <div className="bg-card rounded-lg border shadow-sm p-4 flex-1 overflow-y-auto min-h-0 pb-16">
+        <div className="bg-card rounded-lg border shadow-sm p-4 flex-1 overflow-y-auto min-h-0 mb-20">
           {/* Error message */}
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-600 p-3 rounded-md text-sm mb-4">
@@ -227,7 +227,7 @@ export function TopicPage() {
           )}
           
           {/* PDF Viewer */}
-          <div className="min-h-[70vh] bg-white rounded-lg border mb-4 flex items-center justify-center">
+          <div className="min-h-[70vh] max-h-[calc(100vh-220px)] bg-white rounded-lg border mb-4 flex items-center justify-center overflow-hidden">
             {pdfUrl && !error ? (
               <PDFViewer 
                 pdfUrl={pdfUrl} 
@@ -255,7 +255,7 @@ export function TopicPage() {
         </div>
           
         {/* Fixed PDF Navigation Bar */}
-        <div className="fixed bottom-0 left-0 right-0 bg-background border-t p-2 flex items-center justify-between z-10">
+        <div className="fixed bottom-0 left-0 right-0 bg-background border-t px-6 py-3 flex flex-wrap items-center justify-between gap-4 z-50">
           <div className="flex items-center gap-2">
             <Button 
               variant="outline" 

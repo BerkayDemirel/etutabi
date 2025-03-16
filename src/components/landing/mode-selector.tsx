@@ -68,10 +68,10 @@ export function ModeSelector() {
 
   // Determine card class based on client-side state only
   const getCardClass = () => {
-    const baseClass = "border-2 hover:border-primary transition-all duration-300 cursor-pointer group relative overflow-hidden";
+    const baseClass = "border-2 transition-all duration-300 cursor-pointer group relative overflow-hidden";
     if (!isClient) return baseClass; // Default state for server rendering
     
-    return `${baseClass} ${!isSelectionComplete || isNavigating ? 'opacity-50 pointer-events-none' : 'hover:shadow-lg hover:-translate-y-1'}`;
+    return `${baseClass} ${!isSelectionComplete || isNavigating ? 'opacity-50 pointer-events-none' : 'hover:border-primary hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1'}`;
   };
 
   return (
@@ -85,13 +85,13 @@ export function ModeSelector() {
           className={getCardClass()}
           onClick={() => handleModeSelect("topic")}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <CardContent className="flex flex-col items-center justify-center p-4 text-center h-full">
-            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 mb-3 group-hover:bg-primary/20 transition-colors duration-300">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <CardContent className="flex flex-col items-center justify-center p-4 text-center h-full relative z-10">
+            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 mb-3 group-hover:bg-primary/20 group-hover:scale-105 transition-all duration-300">
               <BookOpenCheck className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-lg font-medium group-hover:text-primary transition-colors duration-300">Konu Modu</h3>
-            <p className="text-sm text-muted-foreground mt-1">
+            <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors duration-300">Konu Modu</h3>
+            <p className="text-sm text-muted-foreground mt-1 group-hover:text-foreground/90 transition-colors duration-300">
               E-kitap üzerinden çalışın ve anlamadığınız yerleri sorun
             </p>
           </CardContent>
@@ -101,13 +101,13 @@ export function ModeSelector() {
           className={getCardClass()}
           onClick={() => handleModeSelect("preparation")}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <CardContent className="flex flex-col items-center justify-center p-4 text-center h-full">
-            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 mb-3 group-hover:bg-primary/20 transition-colors duration-300">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <CardContent className="flex flex-col items-center justify-center p-4 text-center h-full relative z-10">
+            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 mb-3 group-hover:bg-primary/20 group-hover:scale-105 transition-all duration-300">
               <BookOpen className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-lg font-medium group-hover:text-primary transition-colors duration-300">Hazırlık Modu</h3>
-            <p className="text-sm text-muted-foreground mt-1">
+            <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors duration-300">Hazırlık Modu</h3>
+            <p className="text-sm text-muted-foreground mt-1 group-hover:text-foreground/90 transition-colors duration-300">
               Sorular çözün ve anlamadığınız yerleri sorun
             </p>
           </CardContent>
@@ -117,13 +117,13 @@ export function ModeSelector() {
           className={getCardClass()}
           onClick={() => handleModeSelect("testing")}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          <CardContent className="flex flex-col items-center justify-center p-4 text-center h-full">
-            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 mb-3 group-hover:bg-primary/20 transition-colors duration-300">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <CardContent className="flex flex-col items-center justify-center p-4 text-center h-full relative z-10">
+            <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 mb-3 group-hover:bg-primary/20 group-hover:scale-105 transition-all duration-300">
               <ClipboardCheck className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-300" />
             </div>
-            <h3 className="text-lg font-medium group-hover:text-primary transition-colors duration-300">Sınav Modu</h3>
-            <p className="text-sm text-muted-foreground mt-1">
+            <h3 className="text-lg font-medium text-foreground group-hover:text-primary transition-colors duration-300">Sınav Modu</h3>
+            <p className="text-sm text-muted-foreground mt-1 group-hover:text-foreground/90 transition-colors duration-300">
               Zamanlı test çözün ve kendinizi değerlendirin
             </p>
           </CardContent>

@@ -555,5 +555,20 @@
     "misconceptions": [
       "Öğrenciler Newton'un ısı birimi olduğunu düşünebilirler. Ancak Newton kuvvet birimidir, ısı birimi değildir."
     ]
+  },
+  "Fizik-9-Hareket-t2onp2": {
+    "questionId": "Fizik-9-Hareket-t2onp2",
+    "subject": "physics",
+    "steps": [
+      "Hız-zaman grafiği nedir?",
+      "Düzgün doğrusal hareket nedir?",
+      "Düzgün doğrusal hareket yapan bir cismin hız-zaman grafiği nasıl olur?",
+      "Doğru cevabın neden yatay bir çizgi olduğunu açıkla"
+    ],
+    "fullExplanation": "Hız-zaman grafiği, bir cismin hızının zamanla nasıl değiştiğini gösteren bir grafiktir. Düzgün doğrusal hareket ise cismin hızının sabit olduğu harekettir, yani hızı zamanla değişmez. Dolayısıyla, düzgün doğrusal hareket yapan bir cismin hız-zaman grafiği yatay bir çizgi olacaktır çünkü hız sabit kalacaktır. Bu nedenle doğru cevap B seçeneği olan yatay bir çizgidir.",
+    "misconceptions": [
+      "Hız-zaman grafiğinin eğri bir çizgi olması gerektiği yanlış bir inanış olabilir.",
+      "Hız-zaman grafiğinin eğri olması hareketin sürekli hızlanma veya yavaşlama anlamına gelmez."
+    ]
   }
 }

@@ -126,8 +126,3 @@ Copyright (c) 2024 EtutAI by HercAI. Unauthorized use, reproduction, or distribu
 
 See the LICENSE file for details.
 
-## Acknowledgments
-
-- Next.js team for the amazing framework
-- Shadcn UI for the beautiful components
-- OpenAI for the powerful AI capabilities
