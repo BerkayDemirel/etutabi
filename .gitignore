@@ -59,3 +59,7 @@ Thumbs.db
 .vscode/
 *.sublime-project
 *.sublime-workspace
+
+# Large PDF files
+public/pdfs/kimya-9.pdf
+public/pdfs/biyoloji-9.pdf
