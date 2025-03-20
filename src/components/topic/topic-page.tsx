@@ -372,7 +372,7 @@ export function TopicPage() {
           <Button
             variant="ghost"
             size="sm"
-            className="absolute -left-[120px] top-2 h-10 px-3 rounded-l bg-background border-l border-y hover:bg-muted flex items-center gap-2"
+            className="absolute -left-[120px] top-2 h-10 px-3 rounded-l bg-background border-l border-y hover:bg-muted flex items-center gap-2 z-10"
             onClick={toggleSidePanel}
             title="Paneli Kapat"
           >

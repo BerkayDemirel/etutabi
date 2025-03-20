@@ -160,4 +160,52 @@ For all UI enhancements, we recommend:
 4. **Accessibility**: Maintain or improve accessibility with all visual enhancements
 5. **Responsive Design**: Ensure all enhancements work well on all screen sizes
 
-These suggestions aim to elevate the visual appeal of the application while maintaining performance and usability. The focus is on creating a more polished, professional appearance that enhances the user experience without compromising functionality. 
+These suggestions aim to elevate the visual appeal of the application while maintaining performance and usability. The focus is on creating a more polished, professional appearance that enhances the user experience without compromising functionality.
+
+## Open-Ended Questions Enhancements
+
+1. **Answer Input Area Improvements**
+   - Add formatting options for open-ended answers (bold, italic, bullet points)
+   - Implement auto-save functionality for partially completed answers
+   - Add character count and suggested length indicator
+   - Provide keyboard shortcuts for common mathematical symbols
+
+2. **Feedback Display Refinements**
+   - Create collapsible sections for different aspects of feedback
+   - Add visual indicators for key points in the feedback
+   - Implement highlighting of strong and weak points in student answers
+   - Add option to compare student answer with model answer side-by-side
+
+3. **Mathematical Content Support**
+   - Enhance KaTeX integration for more complex expressions
+   - Add an equation editor with common templates
+   - Implement preview functionality for mathematical input
+   - Support for drawing mathematical diagrams
+
+## Testing Mode Enhancements
+
+1. **Test Interface Improvements**
+   - Add keyboard navigation between questions (←, →, numbers)
+   - Implement a mini-map of questions showing answered/unanswered status
+   - Create a "mark for review" feature for questions to revisit
+   - Add option to hide timer to reduce test anxiety
+
+2. **Results Screen Refinements**
+   - Add ability to filter results by question type or difficulty
+   - Implement comparative analytics with previous test attempts
+   - Create downloadable/shareable test results summary
+   - Add visualization options for performance metrics
+
+3. **Time Management Features**
+   - Add customizable time warnings at specific intervals
+   - Create visual time indicator (color changes as time decreases)
+   - Implement section-based timing for multi-part tests
+   - Add option for extended time accommodations
+
+## Accessibility Improvements
+
+## Mobile Experience Optimizations
+
+## Preparation Mode Enhancements
+
+## Topic Mode Enhancements 

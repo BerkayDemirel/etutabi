@@ -32,10 +32,11 @@ function pruneCache(): void {
 // Get all questions for a subject and grade
 export async function fetchQuestionsBySubjectAndGrade(
   subject: string,
-  grade: string
+  grade: string,
+  mode: 'prep' | 'test' = 'prep'
 ): Promise<Question[]> {
   try {
-    const response = await fetch(`/api/questions?subject=${subject}&grade=${grade}`, {
+    const response = await fetch(`/api/questions?subject=${subject}&grade=${grade}&page_mode=${mode}`, {
       headers: {
         'Cache-Control': 'no-cache'
       }
@@ -57,10 +58,11 @@ export async function fetchQuestionsBySubjectAndGrade(
 export async function fetchQuestionsByTopic(
   subject: string,
   grade: string,
-  topic: string
+  topic: string,
+  mode: 'prep' | 'test' = 'prep'
 ): Promise<Question[]> {
   try {
-    const response = await fetch(`/api/questions?subject=${subject}&grade=${grade}&topic=${topic}`);
+    const response = await fetch(`/api/questions?subject=${subject}&grade=${grade}&topic=${topic}&page_mode=${mode}`);
     
     if (!response.ok) {
       const errorData = await response.json();
@@ -79,7 +81,8 @@ export async function fetchQuestionsByTopic(
 // Get a random question
 export async function fetchRandomQuestion(
   subject: string,
-  grade: string
+  grade: string,
+  mode: 'prep' | 'test' = 'prep'
 ): Promise<Question | null> {
   try {
     // Check if we have a recently used question in the cache
@@ -94,7 +97,7 @@ export async function fetchRandomQuestion(
     
     // Add a timestamp to prevent browser caching
     const timestamp = Date.now();
-    const response = await fetch(`/api/questions?subject=${subject}&grade=${grade}&random=true&t=${timestamp}`, {
+    const response = await fetch(`/api/questions?subject=${subject}&grade=${grade}&random=true&t=${timestamp}&page_mode=${mode}`, {
       headers: {
         'Cache-Control': 'no-cache',
         'Pragma': 'no-cache'

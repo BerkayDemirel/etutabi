@@ -58,7 +58,7 @@ export function PreparationPage({ onSidePanelChange }: PreparationPageProps) {
     setError(null);
     
     try {
-      const newQuestion = await fetchRandomQuestion(currentSubject, currentGrade);
+      const newQuestion = await fetchRandomQuestion(currentSubject, currentGrade, 'prep');
       
       if (newQuestion) {
         setQuestion(newQuestion);

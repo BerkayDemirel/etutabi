@@ -7,10 +7,10 @@ import { Send, Loader2, MessageCircle, Trash2, X } from "lucide-react";
 import { useAppContext } from "@/lib/context/app-context";
 import Latex from 'react-latex-next';
 import 'katex/dist/katex.min.css';
-import ReactMarkdown from 'react-markdown';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-import remarkGfm from 'remark-gfm';
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import remarkGfm from "remark-gfm";
+import rehypeKatex from "rehype-katex";
 import rehypeRaw from 'rehype-raw';
 
 interface TopicFollowUpPanelProps {

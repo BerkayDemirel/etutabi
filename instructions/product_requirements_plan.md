@@ -12,26 +12,30 @@ The AI Test Prep Tutor is a web application designed to help elementary school s
 - Authentication system (optional for future phases)
 
 ### 2.2 Preparation Mode
-- Sequential presentation of randomized multiple-choice questions
+- Sequential presentation of randomized multiple-choice and open-ended questions
 - Adaptive feedback system:
-  - Correct answer → Proceed to next question
-  - Incorrect answer → Display first logical step as a hint with encouragement
-- Progressive hint system with two action buttons:
-  - "Give one more tip" → Reveals next logical step
-  - "Explain me the solution" → Displays complete step-by-step solution
-- Post-explanation interaction:
-  - "I have understood the answer" → Proceed to next question
-  - "I have not understood the answer" → Opens text input for specific questions
+  - Multiple-choice: Correct answer → Proceed to next question
+  - Multiple-choice: Incorrect answer → Display first logical step as a hint with encouragement
+  - Open-ended: AI-powered evaluation with detailed feedback
+- Progressive hint system with action buttons:
+  - "Get Hints" → Shows hints in a progressive manner
+  - "Try Again" → Allows selecting a different answer
+  - "Show Solution" → Displays complete step-by-step solution
+  - "Ask Question" → Opens text input for specific questions
+  - "Next Question" → Proceeds to the next question
 - LLM-powered explanations with function calling for structured responses
 - Caching system for previously explained questions
+- Support for mathematical expressions and formulas using KaTeX
 
 ### 2.3 Testing Mode
-- Sequential presentation of 10 multiple-choice questions
+- Sequential presentation of 10 questions (mix of multiple-choice and open-ended)
 - Time tracking functionality
+- Open-ended answer evaluation with AI-powered feedback
 - Results screen with:
   - Correct/incorrect answer summary
-  - "Understand my mistake" option for incorrect answers
+  - Subject and topic-based analysis of mistakes
   - Detailed explanation of each mistake with potential misconception identification
+  - Letter annotations (A, B, C, D) clearly indicating selected answers vs correct answers
 
 ## 3. Technical Requirements
 
@@ -53,9 +57,11 @@ The AI Test Prep Tutor is a web application designed to help elementary school s
 - Questions table:
   - Question ID (primary key)
   - Subject ID (foreign key)
+  - Question type (multiple-choice or open-ended)
   - Question text
-  - Answer options (JSON array)
-  - Correct answer index
+  - Answer options (JSON array, for multiple-choice)
+  - Correct answer index (for multiple-choice)
+  - Correct answer text (for open-ended)
   - Difficulty level
   - Tags/topics
 - Explanations table:
@@ -63,9 +69,18 @@ The AI Test Prep Tutor is a web application designed to help elementary school s
   - Question ID (foreign key)
   - Logical steps (JSON array)
   - Full explanation text
+  - Common misconceptions (JSON array)
+- Open-ended Answers table:
+  - Answer ID (primary key)
+  - Question ID (foreign key)
+  - Student answer text
+  - Evaluation result (0-1 score)
+  - Feedback explanation
+  - Submission timestamp
 - Student Progress table (optional future feature):
   - Student ID (primary key)
   - Question ID (foreign key)
+  - Question type
   - Correct/incorrect
   - Attempts count
   - Last attempt timestamp
@@ -232,7 +247,9 @@ The AI Test Prep Tutor is a web application designed to help elementary school s
 
 ### 5.1 LLM Function Calling
 
-For the OpenAI/DeepSeek integration, we'll implement the following function schema:
+For the OpenAI/DeepSeek integration, we'll implement the following function schemas:
+
+#### 5.1.1 Multiple-Choice Question Solution
 
 ```json
 {
@@ -268,7 +285,35 @@ For the OpenAI/DeepSeek integration, we'll implement the following function sche
   }
 }
 ```
-### 5.2 Sample Prompt Template
+
+#### 5.1.2 Open-Ended Answer Evaluation
+
+```json
+{
+  "name": "evaluate_open_ended_answer",
+  "description": "Evaluate a student's open-ended answer to a given question",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "isCorrect": {
+        "type": "number",
+        "description": "Score between 0 and 1 indicating correctness (0 = incorrect, 1 = correct)",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "explanation": {
+        "type": "string",
+        "description": "Detailed explanation of why the answer is correct or incorrect, with educational feedback"
+      }
+    },
+    "required": ["isCorrect", "explanation"]
+  }
+}
+```
+
+### 5.2 Sample Prompt Templates
+
+#### 5.2.1 Multiple-Choice Question Solution
 
 ```
 You are an expert elementary school tutor helping a student solve a [SUBJECT] question.
@@ -282,6 +327,31 @@ OPTIONS:
 Please provide a step-by-step solution broken down into clear logical steps that an elementary school student could follow. Each step should be one simple action or inference. Explain each step at an appropriate level for the age group.
 
 Also provide a detailed explanation of the solution and identify the correct answer index (0-based). Include any common misconceptions students might have about this problem.
+```
+
+#### 5.2.2 Open-Ended Answer Evaluation
+
+```
+You are an educational AI assistant evaluating student answers to open-ended questions. 
+Grade the student's answer on a scale from 0 to 1, where 0 is completely wrong and 1 is completely correct.
+
+When grading, focus on conceptual understanding rather than exact wording. Provide a detailed explanation for why the answer is correct or incorrect.
+
+If the answer is incorrect or partially correct (score < 0.7):
+1. Begin with a gentle acknowledgment of what parts are correct (if any)
+2. Clearly explain the misconceptions or errors
+3. Provide a detailed step-by-step explanation of the correct approach
+4. Include any relevant formulas, principles, or concepts
+5. Conclude with a summary of the key points to remember
+
+If the answer is correct (score >= 0.7):
+1. Acknowledge the correct answer
+2. Reinforce why the approach was correct
+3. Add any additional insights or alternative methods
+
+Question: [QUESTION_TEXT]
+Correct answer: [CORRECT_ANSWER]
+Student answer: [STUDENT_ANSWER]
 ```
 
 ### 5.3 Error Handling Specifications

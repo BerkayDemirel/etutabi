@@ -3,7 +3,8 @@ import {
   getQuestionsBySubjectAndGrade, 
   getRandomQuestionBySubjectAndGrade,
   getTopicsBySubjectAndGrade,
-  readQuestionsFromCSV
+  readQuestionsFromCSV,
+  getQuestionsByTopic
 } from '@/services/csv-question-service';
 
 // Helper function to create a standardized response with proper headers
@@ -27,8 +28,9 @@ export async function GET(request: NextRequest) {
     const random = searchParams.get('random');
     const topicsOnly = searchParams.get('topics_only');
     const debug = searchParams.get('debug');
+    const pageMode = searchParams.get('page_mode') || 'prep'; // prep or test
 
-    console.log(`API Request - subject: ${subject}, grade: ${grade}, topic: ${topic}, random: ${random}, topicsOnly: ${topicsOnly}`);
+    console.log(`API Request - subject: ${subject}, grade: ${grade}, topic: ${topic}, random: ${random}, topicsOnly: ${topicsOnly}, pageMode: ${pageMode}`);
 
     if (!subject || !grade) {
       return createApiResponse(
@@ -43,7 +45,7 @@ export async function GET(request: NextRequest) {
       return createApiResponse({ 
         allQuestions,
         count: allQuestions.length,
-        params: { subject, grade, random, topicsOnly }
+        params: { subject, grade, random, topicsOnly, pageMode }
       });
     }
 
@@ -55,7 +57,8 @@ export async function GET(request: NextRequest) {
 
     // Return a random question
     if (random === 'true') {
-      const question = await getRandomQuestionBySubjectAndGrade(subject, grade);
+      const mode = pageMode === 'test' ? 'test' : 'prep';
+      const question = await getRandomQuestionBySubjectAndGrade(subject, grade, mode);
       
       if (!question) {
         // Get minimal information about available questions
@@ -80,16 +83,14 @@ export async function GET(request: NextRequest) {
       return createApiResponse({ question });
     }
 
-    // For topic-specific or all questions, just return what we have
-    const questions = await getQuestionsBySubjectAndGrade(subject, grade);
+    // Get questions based on topic and mode
+    let questions;
+    const mode = pageMode === 'test' ? 'test' : 'prep';
     
-    // If topic was specified, filter the results client-side
-    // This avoids duplicating filtering logic server-side
     if (topic) {
-      const filteredQuestions = questions.filter(q => 
-        q.id.toLowerCase().includes(topic.toLowerCase())
-      );
-      return createApiResponse({ questions: filteredQuestions });
+      questions = await getQuestionsByTopic(subject, grade, topic, mode);
+    } else {
+      questions = await getQuestionsBySubjectAndGrade(subject, grade, mode);
     }
     
     return createApiResponse({ questions });

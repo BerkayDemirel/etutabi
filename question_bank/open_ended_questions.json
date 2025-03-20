@@ -1,0 +1,166 @@
+{
+  "questions": [
+    {
+      "id": "Math-9-Functions-open1",
+      "subject": "Math",
+      "grade": "9",
+      "topic": "Functions",
+      "text": "f(x) = 2x - 3 ve g(x) = x² + 1 fonksiyonları veriliyor. f(g(2)) değerini hesaplayın ve adımları açıklayın.",
+      "type": "open-ended",
+      "correctAnswer": "f(g(2)) = f(2² + 1) = f(5) = 2(5) - 3 = 10 - 3 = 7"
+    },
+    {
+      "id": "Math-9-Equations-open2",
+      "subject": "Math",
+      "grade": "9",
+      "topic": "Equations",
+      "text": "3x + 5 = 2x - 7 denkleminin çözümünü adım adım göstererek bulunuz.",
+      "type": "open-ended",
+      "correctAnswer": "x = -12"
+    },
+    {
+      "id": "Math-9-Trigonometry-open3",
+      "subject": "Math",
+      "grade": "9",
+      "topic": "Trigonometry",
+      "text": "sin(30°) değerini hesaplayın ve bir dik üçgen üzerinde göstererek nasıl bulduğunuzu açıklayın.",
+      "type": "open-ended",
+      "correctAnswer": "sin(30°) = 1/2"
+    },
+    {
+      "id": "Physics-9-Motion-open1",
+      "subject": "Fizik",
+      "grade": "9",
+      "topic": "Motion",
+      "text": "Bir araç saatte 60 km hızla hareket ediyor. Sürücü bir engeli gördüğünde frene basıyor ve araç 20 metrede duruyor. Aracın yavaşlaması sırasındaki ivmesini hesaplayınız.",
+      "type": "open-ended",
+      "correctAnswer": "a = -6.94 m/s²"
+    },
+    {
+      "id": "Physics-9-Energy-open2",
+      "subject": "Fizik",
+      "grade": "9",
+      "topic": "Energy",
+      "text": "Bir cismin kinetik enerjisini ikiye katlamak için hızı nasıl değişmelidir? Matematiksel olarak açıklayınız.",
+      "type": "open-ended",
+      "correctAnswer": "Hız √2 kat artmalıdır."
+    },
+    {
+      "id": "Physics-9-Magnetism-open3",
+      "subject": "Fizik",
+      "grade": "9",
+      "topic": "Magnetism",
+      "text": "Bir mıknatısın etrafındaki manyetik alan çizgilerini çizerek, manyetik alanın özelliklerini açıklayınız.",
+      "type": "open-ended",
+      "correctAnswer": "Manyetik alan çizgileri kuzup kutuptan çıkıp güney kutba giren kapalı eğrilerdir. Mıknatısın içinde güney kutuptan kuzey kutba doğru ilerlerler."
+    },
+    {
+      "id": "Chemistry-9-Reactions-open1",
+      "subject": "Kimya",
+      "grade": "9",
+      "topic": "Reactions",
+      "text": "2H₂ + O₂ → 2H₂O tepkimesinde 4 mol H₂ gazı kullanıldığında oluşacak su miktarını hesaplayınız.",
+      "type": "open-ended",
+      "correctAnswer": "4 mol H₂O"
+    },
+    {
+      "id": "Chemistry-9-Stoichiometry-open2",
+      "subject": "Kimya",
+      "grade": "9",
+      "topic": "Stoichiometry",
+      "text": "CaCO₃ → CaO + CO₂ tepkimesinde 50 gram kalsiyum karbonat kullanıldığında kaç gram kalsiyum oksit oluşur? (Ca: 40, C: 12, O: 16)",
+      "type": "open-ended",
+      "correctAnswer": "28 gram CaO"
+    },
+    {
+      "id": "Chemistry-9-PeriodicTable-open3",
+      "subject": "Kimya",
+      "grade": "9",
+      "topic": "PeriodicTable",
+      "text": "Periyodik tabloda elementlerin elektron dizilişleri ile periyot ve grup numaraları arasındaki ilişkiyi açıklayınız.",
+      "type": "open-ended",
+      "correctAnswer": "Periyot numarası, elementin en yüksek enerji seviyesindeki elektronların baş kuantum sayısına eşittir. Grup numarası ise son enerji seviyesindeki elektron sayısı ile ilişkilidir."
+    },
+    {
+      "id": "Biology-9-Genetics-open1",
+      "subject": "Biyoloji",
+      "grade": "9",
+      "topic": "Genetics",
+      "text": "Heterozigot kırmızı çiçekli (Rr) bir bitki ile beyaz çiçekli (rr) bir bitki çaprazlandığında F1 kuşağında hangi genotip ve fenotipleri, hangi oranlarda beklersiniz? Açıklayınız.",
+      "type": "open-ended",
+      "correctAnswer": "%50 Rr (kırmızı), %50 rr (beyaz)"
+    },
+    {
+      "id": "Biology-9-Cells-open2",
+      "subject": "Biyoloji",
+      "grade": "9",
+      "topic": "Cells",
+      "text": "Mitoz bölünme ile mayoz bölünme arasındaki üç temel farkı açıklayınız.",
+      "type": "open-ended",
+      "correctAnswer": "1) Mitoz tek bir bölünme, mayoz iki ardışık bölünmedir. 2) Mitoz sonucu 2 hücre, mayoz sonucu 4 hücre oluşur. 3) Mitoz sonucu oluşan hücreler diploit (2n), mayoz sonucu oluşan hücreler haploit (n) kromozom sayısına sahiptir."
+    },
+    {
+      "id": "Biology-9-Ecology-open3",
+      "subject": "Biyoloji",
+      "grade": "9",
+      "topic": "Ecology",
+      "text": "Bir ekosistemde enerji akışını açıklayarak, enerji piramidinin neden tersine çevrilemeyeceğini belirtiniz.",
+      "type": "open-ended",
+      "correctAnswer": "Ekosistemde enerji kaynağı güneştir. Bitkiler fotosentez ile güneş enerjisini kimyasal enerjiye dönüştürür. Her trofik seviyede enerji ısı olarak kaybolur. Bu nedenle üst seviyelere aktarılan enerji azalır ve piramit şeklinde olur. Termodinamik yasalarına göre enerji kayıpları nedeniyle piramit tersine çevrilemez."
+    },
+    {
+      "id": "SocialStudies-9-History-open1",
+      "subject": "Sosyal Bilimler",
+      "grade": "9",
+      "topic": "History",
+      "text": "Sanayi Devrimi'nin toplumsal ve ekonomik sonuçlarını değerlendiriniz.",
+      "type": "open-ended",
+      "correctAnswer": "Sanayi Devrimi sonucunda: 1) Kırsal alandan kentlere göç arttı, 2) İşçi sınıfı ortaya çıktı, 3) Üretim artışı ve kitle üretimi yaygınlaştı, 4) Uluslararası ticaret gelişti, 5) Yeni toplumsal sınıflar oluştu, 6) Çalışma koşulları değişti."
+    },
+    {
+      "id": "SocialStudies-9-Geography-open2",
+      "subject": "Sosyal Bilimler",
+      "grade": "9",
+      "topic": "Geography",
+      "text": "İklim değişikliğinin Türkiye'deki tarım faaliyetlerine olası etkilerini açıklayınız.",
+      "type": "open-ended",
+      "correctAnswer": "İklim değişikliği Türkiye'de: 1) Kuraklığın artmasına, 2) Su kaynaklarının azalmasına, 3) Bazı bölgelerde tarım ürünlerinin veriminin düşmesine, 4) Tarım alanlarının değişmesine, 5) Yeni tarım zararlılarının ortaya çıkmasına neden olabilir."
+    },
+    {
+      "id": "SocialStudies-9-Economics-open3",
+      "subject": "Sosyal Bilimler",
+      "grade": "9",
+      "topic": "Economics",
+      "text": "Enflasyonun nedenleri ve toplum üzerindeki etkilerini tartışınız.",
+      "type": "open-ended",
+      "correctAnswer": "Enflasyon, talep artışı, maliyet artışı, para arzının artması gibi nedenlerle oluşabilir. Toplum üzerindeki etkileri: 1) Alım gücünün azalması, 2) Gelir dağılımının bozulması, 3) Tasarrufların değer kaybetmesi, 4) Ekonomik belirsizliğin artması."
+    },
+    {
+      "id": "English-9-Grammar-open1",
+      "subject": "İngilizce",
+      "grade": "9",
+      "topic": "Grammar",
+      "text": "Present Simple ve Present Continuous tense arasındaki farkları örneklerle açıklayınız.",
+      "type": "open-ended",
+      "correctAnswer": "Present Simple genellikle alışkanlıklar, rutinler ve genel doğrular için kullanılır (She walks to school every day). Present Continuous ise şu anda devam eden eylemler için kullanılır (She is walking to school now)."
+    },
+    {
+      "id": "English-9-Writing-open2",
+      "subject": "İngilizce",
+      "grade": "9",
+      "topic": "Writing",
+      "text": "Hayatınızda sizi etkileyen bir kişi hakkında kısa bir paragraf yazınız. Bu kişinin sizin üzerinizdeki etkisini açıklayınız.",
+      "type": "open-ended",
+      "correctAnswer": "Öğrencinin kendi yanıtı değerlendirilecektir. Paragrafın giriş cümlesi, destekleyici cümleler ve sonuç cümlesi içermesi beklenir."
+    },
+    {
+      "id": "English-9-Reading-open3",
+      "subject": "İngilizce",
+      "grade": "9",
+      "topic": "Reading",
+      "text": "Aşağıdaki metni okuyup, ana fikri ve destekleyici fikirleri belirtiniz: 'Global warming is one of the biggest challenges facing our planet today. Rising temperatures are causing ice caps to melt, sea levels to rise, and extreme weather events to become more common. Scientists agree that human activities, particularly the burning of fossil fuels, are the main cause of global warming.'",
+      "type": "open-ended",
+      "correctAnswer": "Ana fikir: Küresel ısınma gezegenimiz için büyük bir sorun oluşturmaktadır. Destekleyici fikirler: 1) Sıcaklıkların artması buzulların erimesine neden oluyor, 2) Deniz seviyesi yükseliyor, 3) Aşırı hava olayları daha yaygın hale geliyor, 4) İnsan faaliyetleri, özellikle fosil yakıtların yakılması küresel ısınmanın ana nedenidir."
+    }
+  ]
+} 

@@ -17,6 +17,13 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 interface TestSession {
   questions: Question[];
   answers: (number | null)[];
+  openEndedAnswers: Record<string, {
+    answer: string;
+    evaluation?: {
+      isCorrect: number;
+      explanation: string;
+    }
+  }>;
   startTime: number;
   endTime: number | null;
   isComplete: boolean;
@@ -53,32 +60,39 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
   }, []);
 
   // Function to initialize a new test session
-  const initializeTestSession = useCallback(async () => {
-    if (!currentSubject || !currentGrade) return;
-    
+  const initializeTest = useCallback(async () => {
     setIsLoading(true);
     setError(null);
-    setShowResults(false);
-    setShowTimeWarning(false);
     
     try {
-      // Fetch questions for the current subject and grade
-      const allQuestions = await fetchQuestionsBySubjectAndGrade(currentSubject, currentGrade);
-      
-      if (allQuestions.length === 0) {
-        setError(DEFAULT_MESSAGES.NO_QUESTIONS_FOUND);
-        setIsLoading(false);
+      if (!currentSubject || !currentGrade) {
+        setError("Please select a subject and grade first.");
         return;
       }
       
-      // Shuffle and select the first QUESTIONS_PER_TEST questions
-      const shuffled = shuffleQuestions(allQuestions);
-      const testQuestions = shuffled.slice(0, Math.min(TESTING_PARAMS.QUESTIONS_PER_TEST, shuffled.length));
+      const questions = await fetchQuestionsBySubjectAndGrade(
+        currentSubject,
+        currentGrade,
+        'test'
+      );
       
-      // Initialize the test session
+      if (!questions || questions.length === 0) {
+        setError("No questions found for the selected subject and grade.");
+        return;
+      }
+      
+      // Select 10 random questions
+      const shuffled = shuffleQuestions(questions);
+      const selectedQuestions = shuffled.slice(0, TESTING_PARAMS.QUESTIONS_PER_TEST);
+      
+      // Create empty answers array
+      const emptyAnswers = Array(selectedQuestions.length).fill(null);
+      
+      // Create new test session
       const newSession: TestSession = {
-        questions: testQuestions,
-        answers: Array(testQuestions.length).fill(null),
+        questions: selectedQuestions,
+        answers: emptyAnswers,
+        openEndedAnswers: {},
         startTime: Date.now(),
         endTime: null,
         isComplete: false
@@ -87,20 +101,20 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
       setTestSession(newSession);
       setCurrentQuestionIndex(0);
       setElapsedTime(0);
+      setShowResults(false);
     } catch (error) {
-      console.error("Error initializing test session:", error);
-      setError(DEFAULT_MESSAGES.QUESTION_LOAD_ERROR);
+      setError(`Failed to load questions: ${error instanceof Error ? error.message : String(error)}`);
     } finally {
       setIsLoading(false);
     }
-  }, [currentSubject, currentGrade, shuffleQuestions]);
+  }, [currentSubject, currentGrade]);
 
   // Initialize test session when component mounts or subject/grade changes
   useEffect(() => {
     if (currentSubject && currentGrade) {
-      initializeTestSession();
+      initializeTest();
     }
-  }, [currentSubject, currentGrade, initializeTestSession]);
+  }, [currentSubject, currentGrade, initializeTest]);
 
   // Timer effect to track elapsed time and handle time limits
   useEffect(() => {
@@ -135,21 +149,107 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
   };
 
   // Handle answer selection
-  const handleAnswerSelect = useCallback((questionIndex: number, answerIndex: number) => {
+  const handleAnswerSelect = useCallback((answerIndex: number) => {
     if (!testSession) return;
     
+    // Update the answers array with the selected answer
+    const updatedAnswers = [...testSession.answers];
+    updatedAnswers[currentQuestionIndex] = answerIndex;
+    
+    // Update the test session
     setTestSession(prev => {
-      if (!prev) return prev;
+      if (!prev) return null;
+      return {
+        ...prev,
+        answers: updatedAnswers
+      };
+    });
+    
+    // Remove automatic progression to next question
+  }, [testSession, currentQuestionIndex]);
+
+  // Handle open-ended answer submission
+  const handleOpenEndedSubmit = useCallback(async (answer: string) => {
+    if (!testSession) return;
+    
+    const currentQuestion = testSession.questions[currentQuestionIndex];
+    
+    // First update the answer immediately without evaluation
+    setTestSession(prev => {
+      if (!prev) return null;
       
-      const newAnswers = [...prev.answers];
-      newAnswers[questionIndex] = answerIndex;
+      const updatedOpenEndedAnswers = {
+        ...prev.openEndedAnswers,
+        [currentQuestion.id]: {
+          answer,
+          // Evaluation will be added after the API call
+        }
+      };
       
       return {
         ...prev,
-        answers: newAnswers
+        openEndedAnswers: updatedOpenEndedAnswers
       };
     });
-  }, [testSession]);
+    
+    try {
+      // Send the answer for evaluation
+      const response = await fetch('/api/evaluate-answer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          questionId: currentQuestion.id,
+          questionText: currentQuestion.text,
+          studentAnswer: answer,
+          correctAnswer: currentQuestion.correctAnswer,
+        }),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to evaluate answer');
+      }
+      
+      const result = await response.json();
+      
+      // Update the test session with the evaluation
+      setTestSession(prev => {
+        if (!prev) return null;
+        
+        const updatedOpenEndedAnswers = {
+          ...prev.openEndedAnswers,
+          [currentQuestion.id]: {
+            answer,
+            evaluation: {
+              isCorrect: result.isCorrect,
+              explanation: result.explanation,
+            }
+          }
+        };
+        
+        return {
+          ...prev,
+          openEndedAnswers: updatedOpenEndedAnswers
+        };
+      });
+      
+      // Remove automatic progression to next question
+    } catch (error) {
+      console.error('Error evaluating answer:', error);
+      // Show a temporary error message
+      setError(`${DEFAULT_MESSAGES.OPEN_ENDED_EVALUATION_ERROR} ${error instanceof Error ? error.message : ''}`);
+      
+      // Clear the error after a few seconds
+      setTimeout(() => {
+        setError(null);
+      }, 5000);
+      
+      // Remove the pending evaluation
+      throw error; // Rethrow to let the UI component know
+    }
+  }, [testSession, currentQuestionIndex]);
 
   // Navigate to the next question
   const handleNextQuestion = useCallback(() => {
@@ -171,9 +271,30 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
   const handleCompleteTest = useCallback(() => {
     if (!testSession) return;
     
+    // Calculate if all questions have been answered
+    const allAnswered = testSession.questions.every(question => {
+      if (question.type === "multiple-choice") {
+        const index = testSession.questions.findIndex(q => q.id === question.id);
+        return testSession.answers[index] !== null;
+      } else if (question.type === "open-ended") {
+        return question.id in testSession.openEndedAnswers && 
+               !!testSession.openEndedAnswers[question.id]?.answer;
+      }
+      return false;
+    });
+    
+    if (!allAnswered) {
+      setError("Lütfen tüm soruları cevaplayın.");
+      // Clear the error after a few seconds
+      setTimeout(() => {
+        setError(null);
+      }, 3000);
+      return;
+    }
+    
+    // Update the session with the end time and completion status
     setTestSession(prev => {
-      if (!prev) return prev;
-      
+      if (!prev) return null;
       return {
         ...prev,
         endTime: Date.now(),
@@ -181,13 +302,28 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
       };
     });
     
+    // Show the results
     setShowResults(true);
   }, [testSession]);
 
   // Calculate if all questions have been answered
   const allQuestionsAnswered = useMemo(() => {
     if (!testSession) return false;
-    return !testSession.answers.includes(null);
+    
+    // Check if all multiple choice questions have answers
+    const allMultipleChoiceAnswered = testSession.questions
+      .filter(q => q.type === "multiple-choice")
+      .every((q, i) => {
+        const questionIndex = testSession.questions.findIndex(tq => tq.id === q.id);
+        return testSession.answers[questionIndex] !== null;
+      });
+    
+    // Check if all open-ended questions have answers
+    const allOpenEndedAnswered = testSession.questions
+      .filter(q => q.type === "open-ended")
+      .every(q => q.id in testSession.openEndedAnswers && !!testSession.openEndedAnswers[q.id]?.answer);
+    
+    return allMultipleChoiceAnswered && allOpenEndedAnswered;
   }, [testSession]);
 
   // Get formatted subject name in Turkish
@@ -247,7 +383,7 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
       <div className="text-center p-3">
         <p className="text-base text-red-500">{error}</p>
         <Button 
-          onClick={initializeTestSession} 
+          onClick={initializeTest} 
           className="mt-3"
           size="sm"
         >
@@ -262,7 +398,7 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
     return (
       <TestResults 
         testSession={testSession}
-        onRestartTest={initializeTestSession}
+        onRestartTest={initializeTest}
       />
     );
   }
@@ -305,16 +441,30 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
               Soru {currentQuestionIndex + 1} / {testSession.questions.length}
             </div>
             <div className="text-sm text-muted-foreground">
-              {testSession.answers.filter(a => a !== null).length} / {testSession.questions.length} Cevaplandı
+              {testSession.questions.filter((q, i) => {
+                return q.type === "multiple-choice" 
+                  ? testSession.answers[i] !== null
+                  : q.id in testSession.openEndedAnswers && !!testSession.openEndedAnswers[q.id]?.answer;
+              }).length} / {testSession.questions.length} Cevaplandı
             </div>
           </div>
 
-          <TestQuestionDisplay
-            question={testSession.questions[currentQuestionIndex]}
-            selectedAnswer={testSession.answers[currentQuestionIndex]}
-            onAnswerSelect={(answerIndex) => handleAnswerSelect(currentQuestionIndex, answerIndex)}
-            testMode={true}
-          />
+          <div className="min-h-[350px]">
+            {testSession && testSession.questions[currentQuestionIndex] && (
+              <TestQuestionDisplay
+                question={testSession.questions[currentQuestionIndex]}
+                selectedAnswer={testSession.answers[currentQuestionIndex]}
+                onAnswerSelect={handleAnswerSelect}
+                onOpenEndedSubmit={handleOpenEndedSubmit}
+                testMode={true}
+                previousOpenEndedAnswer={
+                  testSession.questions[currentQuestionIndex].type === "open-ended" 
+                    ? testSession.openEndedAnswers[testSession.questions[currentQuestionIndex].id]?.answer 
+                    : undefined
+                }
+              />
+            )}
+          </div>
 
           <div className="flex justify-between mt-4">
             <Button
@@ -349,17 +499,24 @@ export function TestingPage({ onSidePanelChange }: TestingPageProps) {
           </div>
 
           <div className="flex flex-wrap gap-2 mt-4">
-            {testSession.questions.map((_, index) => (
-              <Button
-                key={index}
-                variant={index === currentQuestionIndex ? "default" : testSession.answers[index] !== null ? "outline" : "ghost"}
-                size="sm"
-                className={`w-8 h-8 p-0 ${testSession.answers[index] !== null ? "border-green-500 text-green-600" : "text-muted-foreground"}`}
-                onClick={() => setCurrentQuestionIndex(index)}
-              >
-                {index + 1}
-              </Button>
-            ))}
+            {testSession.questions.map((question, index) => {
+              // Check if this question is answered (either multiple choice or open-ended)
+              const isAnswered = question.type === "multiple-choice" 
+                ? testSession.answers[index] !== null
+                : question.id in testSession.openEndedAnswers && !!testSession.openEndedAnswers[question.id]?.answer;
+              
+              return (
+                <Button
+                  key={index}
+                  variant={index === currentQuestionIndex ? "default" : isAnswered ? "outline" : "ghost"}
+                  size="sm"
+                  className={`w-8 h-8 p-0 ${isAnswered ? "border-green-500 text-green-600" : "text-muted-foreground"}`}
+                  onClick={() => setCurrentQuestionIndex(index)}
+                >
+                  {index + 1}
+                </Button>
+              );
+            })}
           </div>
         </>
       )}

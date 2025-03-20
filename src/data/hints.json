@@ -570,5 +570,162 @@
       "Hız-zaman grafiğinin eğri bir çizgi olması gerektiği yanlış bir inanış olabilir.",
       "Hız-zaman grafiğinin eğri olması hareketin sürekli hızlanma veya yavaşlama anlamına gelmez."
     ]
+  },
+  "Fizik-9-Basınç-9w9uyt": {
+    "questionId": "Fizik-9-Basınç-9w9uyt",
+    "subject": "physics",
+    "steps": [
+      "Katıların basıncı nedir?",
+      "Basınç formülü nedir?",
+      "Basınç hangi büyüklüklere bağlıdır?",
+      "Doğru seçeneği belirle"
+    ],
+    "fullExplanation": "1. Katıların basıncı, bir yüzeye uygulanan kuvvetin yüzey alanına bölünmesiyle hesaplanır.\n2. Basınç formülü: Basınç = Kuvvet / Yüzey Alanı\n3. Basınç, uygulanan kuvvetin büyüklüğüne ve yüzey alanına bağlıdır. Yani basınç, kuvvet ve yüzey alanı ile ilişkilidir.\n4. Verilen seçenekler arasında basınç ile en doğrudan ilişkili olan büyüklükler kuvvet ve yüzey alanıdır. Dolayısıyla doğru cevap B seçeneğidir.",
+    "misconceptions": [
+      "Basınç sadece kuvvetle ilişkilidir.",
+      "Yüzey alanı basınç üzerinde etkili değildir."
+    ]
+  },
+  "Fizik-9-İş ve Enerji-sazbds": {
+    "questionId": "Fizik-9-İş ve Enerji-sazbds",
+    "subject": "physics",
+    "steps": [
+      "Kinetik enerjinin formülünü hatırla: KE = 1/2 * m * v^2",
+      "Kinetik enerjinin kütleye ve hıza bağlı olduğunu fark et",
+      "Kinetik enerjinin kütlenin ve hızın karesine bağlı olduğunu belirle",
+      "Doğru seçeneği seç: Kütle ve hızın karesine bağlı (C)"
+    ],
+    "fullExplanation": "Kinetik enerji, bir cismin hareketinden kaynaklanan enerjidir. Kinetik enerji, cismin kütlesine ve hızına bağlıdır. Hareket eden bir cismin kinetik enerjisi, cismin kütlesinin ve hızının karesinin çarpımının yarısına eşittir. Yani kinetik enerji, kütle ve hızın karesine bağlıdır. Bu nedenle doğru cevap C seçeneğidir.",
+    "misconceptions": [
+      "Kinetik enerjinin sadece hıza bağlı olduğu düşünülür.",
+      "Kinetik enerjinin sadece kütleye bağlı olduğu yanlış bir inanıştır."
+    ]
+  },
+  "Math-9-Geometri-ucf6ds": {
+    "questionId": "Math-9-Geometri-ucf6ds",
+    "subject": "math",
+    "steps": [
+      "Dik üçgenin hipotenüsü Pythagoras teoremi kullanılarak bulunur.",
+      "Pythagoras teoremi: Hipotenüsün karesi, diğer iki kenarın karelerinin toplamına eşittir (c^2 = a^2 + b^2).",
+      "Verilen dik kenarlar 6 cm ve 8 cm olduğuna göre, hipotenüsü bulmak için formülü kullan.",
+      "a=6, b=8 olarak yerine koyarak hipotenüsü hesapla."
+    ],
+    "fullExplanation": "Bu soruda verilen dik üçgenin dik kenarları 6 cm ve 8 cm olduğu belirtilmiş. Hipotenüsü bulmak için Pythagoras teoremini kullanacağız. Pythagoras teoremine göre hipotenüsün karesi, diğer iki kenarın karelerinin toplamına eşittir. Yani c^2 = a^2 + b^2 formülünü kullanacağız. Verilen dik kenarlar a=6 cm ve b=8 cm olduğuna göre, hipotenüsü bulmak için bu değerleri formüle yerine koyarak c^2 = 6^2 + 8^2 hesaplamasını yapacağız. Sonuç olarak hipotenüsün uzunluğu 10 cm olarak bulunacaktır.",
+    "misconceptions": [
+      "Hipotenüsü bulmak için sadece dik kenarları toplamak yeterli değildir. Pythagoras teoremi kullanılmalıdır."
+    ]
+  },
+  "Math-9-Sayı Teorisi-v4tnsj": {
+    "questionId": "Math-9-Sayı Teorisi-v4tnsj",
+    "subject": "math",
+    "steps": [
+      "120 sayısının asal çarpanlarını bul",
+      "Asal çarpanları çarpanlara ayır",
+      "Çarpanları sırala ve üslerini belirle",
+      "Sonucu doğru formatta yaz"
+    ],
+    "fullExplanation": "120 sayısının asal çarpanlarına ayrılmış hâli şu şekildedir: 2³ * 3¹ * 5¹ = 2³ * 3 * 5 = 2³ * 3 * 5 = 8 * 3 * 5 = 24 * 5 = 120. Dolayısıyla, 120 sayısının asal çarpanlarına ayrılmış hâli 2³ * 3 * 5 şeklindedir, yani C seçeneğidir.",
+    "misconceptions": [
+      "Asal çarpanları doğru şekilde bulmamak",
+      "Üsleri yanlış belirlemek"
+    ]
+  },
+  "Math-9-Koordinat Geometrisi-k40ny2": {
+    "questionId": "Math-9-Koordinat Geometrisi-k40ny2",
+    "subject": "math",
+    "steps": [
+      "Doğrunun eğimi (-2) ve (1,5) noktasından geçtiği bilgisiyle doğrunun denklemi bulunabilir.",
+      "Eğim ve bir nokta bilgisi kullanılarak doğrunun denklemi bulunabilir.",
+      "Doğrunun denklemi genel formunda (y = mx + b) olacak şekilde yazılabilir ve verilen nokta kullanılarak sabit terim (b) bulunabilir.",
+      "Bulunan eğim ve sabit terim doğrunun denklemine yerine yazılarak doğru cevap belirlenebilir."
+    ],
+    "fullExplanation": "Verilen soruda, eğimi -2 olan ve (1,5) noktasından geçen doğrunun denklemi bulunmak istenmektedir. İlk olarak, doğrunun eğimi (-2) ve verilen nokta (1,5) kullanılarak doğrunun denklemi bulunabilir. Doğrunun denklemi genel formunda y = mx + b şeklinde yazılır. Eğim (-2) ve nokta (1,5) kullanılarak sabit terim (b) bulunur. Bulunan eğim ve sabit terim doğrunun denkleminde yerine yazılarak doğru cevap belirlenir. Sonuç olarak, doğrunun denklemi y = -2x + 7 olacaktır.",
+    "misconceptions": [
+      "Eğim ve bir nokta verildiğinde doğrunun denklemi bulunurken dikkatli olunmalıdır.",
+      "Doğrunun denklemi genel formunda (y = mx + b) olmalıdır ve verilen bilgiler doğru şekilde yerine yazılmalıdır."
+    ]
+  },
+  "Fizik-9-Manyetizma-dhftgw": {
+    "questionId": "Fizik-9-Manyetizma-dhftgw",
+    "subject": "physics",
+    "steps": [
+      "Seçenekleri inceleyerek hangisinin mıknatısın temel özelliklerinden biri olmadığını belirle",
+      "Doğru cevabı seçeneğin yanındaki harfe göre belirle (D)",
+      "Doğru cevabı kontrol et"
+    ],
+    "fullExplanation": "Mıknatısın temel özellikleri arasında kendi manyetik alanını oluşturması, çekim kuvveti uygulaması, kutuplarının ters çevrilebilir olması ve kendi kutuplarının olması bulunmaktadır. Ancak sadece demiri çekmesi mıknatısın temel özelliklerinden biri değildir. Mıknatıs, demir dışındaki materyalleri de çekebilir. Dolayısıyla, doğru cevap D seçeneğidir.",
+    "misconceptions": [
+      "Mıknatıs sadece demiri çeker düşüncesi yanlıştır. Mıknatıs, demir dışındaki materyalleri de çekebilir."
+    ]
+  },
+  "Fizik-9-Elektrik Devreleri-bjmaq": {
+    "questionId": "Fizik-9-Elektrik Devreleri-bjmaq",
+    "subject": "physics",
+    "steps": [
+      "Direnç iki katına çıktığında, akımın nasıl değiştiğini belirlemek için Ohm's Kanunu'nu kullan.",
+      "Ohm's Kanunu'na göre, akım dirençle ters orantılıdır. Yani direnç arttıkça akım azalır.",
+      "Direnç iki katına çıktığında, akımın yarıya inmesi beklenir."
+    ],
+    "fullExplanation": "Bu soruda, elektrik devresindeki direnç arttığında akımın nasıl etkilendiğini anlamamız gerekiyor. Ohm's Kanunu'na göre, akım ile direnç arasında ters bir ilişki vardır. Yani direnç arttıkça akım azalır. Dolayısıyla, direnç iki katına çıktığında akımın da yarıya inmesi beklenir. Bu nedenle doğru cevap E seçeneğidir.",
+    "misconceptions": [
+      "Direnç arttıkça akım da artar.",
+      "Direnç ve akım arasında doğru orantı olduğu düşünülür, ancak aslında ters orantılıdır."
+    ]
+  },
+  "Fizik-9-Hareket Yasaları-9iwppz": {
+    "questionId": "Fizik-9-Hareket Yasaları-9iwppz",
+    "subject": "physics",
+    "steps": [
+      "Newton'un 3. hareket yasasının ne olduğunu anlamak",
+      "Seçenekleri incelemek ve doğru seçeneği belirlemek",
+      "Newton'un 3. hareket yasasının doğru cevabı olan 'Etki-Tepki'yi seçmek"
+    ],
+    "fullExplanation": "Newton'un 3. hareket yasası, 'Etki-Tepki' prensibi olarak da bilinir. Bu yasa, bir cismin diğer bir cisme uyguladığı kuvvetin, o cisme uygulanan tepkinin büyüklüğüne eşit olduğunu belirtir. Yani, bir cisim diğer bir cisme bir kuvvet uyguladığında, o cisme uygulanan tepki kuvveti, uygulanan kuvvetle aynı büyüklükte ve zıt yönde olacaktır. Bu prensip, hareketin ve denge durumunun anlaşılmasında önemli bir rol oynar.",
+    "misconceptions": [
+      "Newton'un 3. hareket yasasının 'F=ma' olduğunu düşünmek"
+    ]
+  },
+  "Fizik-9-Kuvvet ve Hareket-bknpjo": {
+    "questionId": "Fizik-9-Kuvvet ve Hareket-bknpjo",
+    "subject": "physics",
+    "steps": [
+      "Newton'un ikinci hareket yasasını hatırla: F = m * a",
+      "Net kuvvetin büyüklüğünü hesaplamak için kütleyi (m) ve ivmeyi (a) belirle",
+      "Formülde verilen kütleyi (m) ve ivmeyi (a) kullanarak net kuvveti (F) hesapla",
+      "Sonucu kontrol et ve doğru cevabı belirle"
+    ],
+    "fullExplanation": "Newton'un ikinci hareket yasasına göre, bir cisim üzerine etki eden net kuvvet, cismin kütlesi ile ivme çarpımına eşittir. Yani F = m * a formülünü kullanarak net kuvvetin büyüklüğünü hesaplayabiliriz. Soruda verilen seçenekler arasında doğru cevap D seçeneğidir, çünkü F = m * a formülü net kuvvetin büyüklüğünü doğru şekilde ifade eder.",
+    "misconceptions": [
+      "Net kuvvetin büyüklüğünü hesaplarken hızı (v) veya yerçekimi ivmesini (g) kullanmak yanlıştır.",
+      "Net kuvvetin büyüklüğünü hesaplarken kütleyi (m) ve ivmeyi (a) çarpmak gereklidir, doğrudan bölme işlemi uygulanmaz."
+    ]
+  },
+  "Fizik-9-Elektrik-b06rd2": {
+    "questionId": "Fizik-9-Elektrik-b06rd2",
+    "subject": "physics",
+    "steps": [
+      "Ohm's Kanunu'nu hatırla: V = I * R formülünü kullan",
+      "Verilen değerleri formüle yerine koy",
+      "Gerilimi hesapla"
+    ],
+    "fullExplanation": "Bu soruda, Ohm's Kanunu'nu kullanarak devrenin gerilimini hesaplayacağız. Ohm's Kanunu'na göre, V (gerilim) = I (akım) * R (direnç). Verilen değerlerle bu formülü kullanarak, V = 3A * 4Ω = 12V olarak hesaplanır. Yani, devrenin gerilimi 12 volttur.",
+    "misconceptions": [
+      "Direncin akıma bölünmesi gerektiği yanlış anlaşılabilir. Doğru formül V = I * R'dir."
+    ]
+  },
+  "Fizik-9-İş ve Enerji-cask4c": {
+    "questionId": "Fizik-9-İş ve Enerji-cask4c",
+    "subject": "physics",
+    "steps": [
+      "Verilen kuvvet ve mesafe değerlerini kullanarak iş formülünü uygula",
+      "İş formülü: İş = Kuvvet x Mesafe",
+      "Verilen değerleri iş formülüne yerine koyarak işi hesapla",
+      "Sonucu Joule cinsinden bul"
+    ],
+    "fullExplanation": "Verilen soruda, bir cisim 50 Newton'luk kuvvetle 10 metre itiliyor. İş, kuvvet ile mesafenin çarpımı olarak hesaplanır. Yani İş = Kuvvet x Mesafe formülünü kullanarak işlem yapacağız. Verilen değerleri formüle yerine koyduğumuzda İş = 50 N x 10 m = 500 Joule olur. Dolayısıyla yapılan iş 500 Joule'dür.",
+    "misconceptions": [
+      "Öğrenciler kuvvet ve mesafe değerlerini yanlış yerlere yerleştirebilirler.",
+      "İş formülünü yanlış uygulayarak hatalı sonuçlar elde edebilirler."
+    ]
   }
 }

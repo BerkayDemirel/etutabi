@@ -12,7 +12,8 @@
     "docker:build": "docker-compose build",
     "docker:start": "docker-compose up -d",
     "docker:stop": "docker-compose down",
-    "clean": "rm -rf .next node_modules"
+    "clean": "rm -rf .next node_modules",
+    "test-openended": "node -r dotenv/config src/scripts/test-openended-evaluation.js"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.3",
